@@ -1,6 +1,7 @@
 {
   "name": "soojong",
   "version": "0.1.0",
+  "homepage": "https://munchicken1/github.io",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.0",
@@ -27,6 +28,8 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
+    "predeplay": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -51,6 +54,7 @@
     ]
   },
   "devDependencies": {
-    "@types/styled-components": "^5.1.26"
+    "@types/styled-components": "^5.1.26",
+    "gh-pages": "^4.0.0"
   }
 }

@@ -4,7 +4,6 @@ import { Container } from "../../style/Container.style"
 import * as S from '../../constants/StringConstants'
 
 export const SkillsContainer = styled(Container)`
-  background-color: ${(props) => props.theme.colors.white};
   padding: 40px;
 `
 

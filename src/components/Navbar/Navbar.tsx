@@ -65,13 +65,13 @@ const Navbar = () => {
           <AboutIcon />
           {S.Navigation.About}
         </NavbarListItem>
-        <NavbarListItem onClick={handleClickProjects}>
-          <ProjectsIcon />
-          {S.Navigation.Projects}
-        </NavbarListItem>
         <NavbarListItem onClick={handleClickSkills}>
           <SkillsIcon />
           {S.Navigation.Skills}
+        </NavbarListItem>
+        <NavbarListItem onClick={handleClickProjects}>
+          <ProjectsIcon />
+          {S.Navigation.Projects}
         </NavbarListItem>
         <NavbarListItem onClick={handleClickExperience}>
           <ExperienceIcon />

@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Dialog } from "@mui/material"
+import CloseIcon from '@mui/icons-material/Close';
 
 export const ModalProjectDialog = styled(Dialog)`
     /* min-width: 1000px; */
@@ -33,6 +34,7 @@ export const ModalProjectBodyContainer = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   padding: 40px;
+  border-left: 1px solid black;
 `
 
 export const ModalProjectTitleText = styled.p`
@@ -48,4 +50,11 @@ export const ModalProjectContentText = styled.p`
 `
 export const ModalProjectCarouselSlideContainer = styled.div`
     height: 100%;
+`
+
+export const ModalCloseIcon = styled(CloseIcon)`
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    right: 10px;
 `

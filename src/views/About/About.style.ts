@@ -2,10 +2,13 @@ import styled from "styled-components"
 import { TitleText } from "../../style/TextStyle.style"
 import { Container } from '../../style/Container.style'
 
+const ColumnPadding = '20px'
+
 export const AboutContainer = styled(Container)`
   background-color: ${(props) => props.theme.colors.white};
   flex-direction: row;
   justify-content: space-between;
+  align-items: flex-start;
   padding: 40px;
 
   @media (max-width: 800px) {
@@ -18,7 +21,7 @@ export const AboutImageContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex: 50%;
-  padding: 20px;
+  padding: ${ColumnPadding};
   overflow: hidden;
 
   @media (max-width: 800px) {
@@ -36,17 +39,20 @@ export const AboutImage = styled.img`
 export const AboutTextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   height: 100%;
   flex: 70%;
+
+  padding: ${ColumnPadding};
 `
 
 export const AboutTitle = styled(TitleText)`
-  padding: 0;
-  padding-bottom: 40px;
 `
 
 export const AboutText = styled.p`
+  font-size: 18px;
   line-height: 200%;
   color: ${(props) => props.theme.colors.charcoal};
+
+  margin-top: 20px;
 `

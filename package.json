@@ -21,6 +21,7 @@
     "react-redux": "^8.0.2",
     "react-responsive-carousel": "^3.2.23",
     "react-scripts": "5.0.1",
+    "react-social-icons": "^5.14.0",
     "redux": "^4.2.0",
     "styled-components": "^5.3.5",
     "typesafe-actions": "^5.1.0",
@@ -54,6 +55,7 @@
     ]
   },
   "devDependencies": {
+    "@types/jquery": "^3.5.14",
     "@types/styled-components": "^5.1.26",
     "gh-pages": "^4.0.0"
   }

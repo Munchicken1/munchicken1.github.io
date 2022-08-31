@@ -17,8 +17,8 @@ export const About = {
 
 export const Projects = {
   title: "My Projects",
-  firstProjectTitle: 'Chelsea Framing Products',
-  firstProjectDescription: About.Introduce,
+  projectTitle: "Chelsea Framing Products",
+  projectDescription: About.Introduce,
 }
 
 export const Skills = {
@@ -41,8 +41,38 @@ export const Skills = {
 
 export const Experience = {
   title: "Experience",
-  contents:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id dignissim neque. Suspendisse eu nisl vehicula, pulvinar urna non, molestie turpis. Maecenas eleifend feugiat leo, quis rhoncus sapien congue nec. Suspendisse a urna at tortor gravida pellentesque. Vestibulum posuere massa semper, molestie est eu, tristique justo. Cras accumsan sapien malesuada, porta enim non, facilisis neque. Nunc at interdum dui. Ut sed varius nisi, ut viverra libero.",
+  contents: [
+    {
+      Title: "PNS Management, Inc.",
+      Date: "Sep 2019 - Sep 2020",
+      Location: "Bensenville, IL",
+      JobTitle: "IT Specialist",
+      Descriptions: [
+        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+      ],
+    },
+    {
+      Title: "Chelsea Framing Products",
+      Date: "Oct 2018 - Sep 2019",
+      Location: "Lake Zurich, IL",
+      JobTitle: "Fullstack Developer",
+      Descriptions: [
+        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+      ],
+    },
+    {
+      Title: "Freelancer",
+      Date: "",
+      Location: "Chicago, IL",
+      JobTitle: "ReactJS Developer",
+      Descriptions: [
+        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+      ],
+    },
+  ],
 }
 
 export const Contact = {

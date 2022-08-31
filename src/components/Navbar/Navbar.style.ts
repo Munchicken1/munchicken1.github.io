@@ -22,11 +22,12 @@ export const NavbarList = styled.ul`
 `
 
 export const NavbarListItem = styled.li`
+  width: fit-content;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  width: fit-content;
+
   padding: 7px;
   color: ${(props) => props.theme.colors.charcoal};
   border-radius: 6px;
@@ -42,6 +43,7 @@ export const NavbarListItem = styled.li`
         }
         transition: all .3s ease-out;
   }
+
 `
 
 const IconCSS = css`

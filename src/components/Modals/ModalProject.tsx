@@ -8,6 +8,7 @@ import {
   ModalProjectImage,
   ModalProjectDialog,
   ModalProjectCarouselSlideContainer,
+  ModalCloseIcon,
 } from "./ModalProject.style"
 import chelsea1 from "assets/chelsea1.png"
 import chelsea2 from "assets/chelsea2.png"
@@ -51,13 +52,13 @@ const ModalProject: React.FC<IProps> = ({
             </ModalProjectCarouselSlideContainer>
           </Carousel>
         </ModalProjectImageSlideContainer>
-        <hr />
         <ModalProjectBodyContainer>
+          <ModalCloseIcon onClick={closeModalProject} />
           <ModalProjectTitleText>
-            {S.Projects.firstProjectTitle}
+            {S.Projects.projectTitle}
           </ModalProjectTitleText>
           <ModalProjectContentText>
-            {S.Projects.firstProjectDescription}
+            {S.Projects.projectDescription}
           </ModalProjectContentText>
         </ModalProjectBodyContainer>
       </ModalProjectContainer>

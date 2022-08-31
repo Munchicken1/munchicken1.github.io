@@ -39,6 +39,21 @@ export const GlobalStyle = createGlobalStyle`
         justify-content: space-between;
         padding: 5px;
     }
+    a.social-icon{
+        transition: all 0.3s ease-out;
+        :hover {
+            g.social-svg-mask {
+                fill: ${(props) => props.theme.colors.moonComplementary} !important;
+            }
+        }
+    }
+    a.social-icon {
+        transition: all 0.3s ease-out;
+        :hover {
+            width: 55px !important;
+            height: 55px !important;
+        }
+    }
     
 
 `

@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.8eb20739.css",
-    "main.js": "/static/js/main.e878b251.js",
-    "static/media/chelsea1.png": "/static/media/chelsea1.c50ff23e7413a3da894c.png",
-    "static/media/chelsea2.png": "/static/media/chelsea2.e6130b96b3b73a952667.png",
-    "static/media/chelsea3.png": "/static/media/chelsea3.af89c1dfd9d9a70c90c7.png",
-    "static/media/aboutMe.jpg": "/static/media/aboutMe.39af2eb711ce8646c4ae.jpg",
-    "index.html": "/index.html",
-    "main.8eb20739.css.map": "/static/css/main.8eb20739.css.map",
-    "main.e878b251.js.map": "/static/js/main.e878b251.js.map"
+    "main.css": "/github.io/static/css/main.8eb20739.css",
+    "main.js": "/github.io/static/js/main.2fefd8ed.js",
+    "static/media/chelsea1.png": "/github.io/static/media/chelsea1.c50ff23e7413a3da894c.png",
+    "static/media/chelsea2.png": "/github.io/static/media/chelsea2.e6130b96b3b73a952667.png",
+    "static/media/chelsea3.png": "/github.io/static/media/chelsea3.af89c1dfd9d9a70c90c7.png",
+    "static/media/chelsea_cover.jpeg": "/github.io/static/media/chelsea_cover.98b7f632d389f54531a7.jpeg",
+    "static/media/aboutMe.jpg": "/github.io/static/media/aboutMe.39af2eb711ce8646c4ae.jpg",
+    "index.html": "/github.io/index.html",
+    "main.8eb20739.css.map": "/github.io/static/css/main.8eb20739.css.map",
+    "main.2fefd8ed.js.map": "/github.io/static/js/main.2fefd8ed.js.map"
   },
   "entrypoints": [
     "static/css/main.8eb20739.css",
-    "static/js/main.e878b251.js"
+    "static/js/main.2fefd8ed.js"
   ]
 }

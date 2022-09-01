@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/github.io/static/css/main.8eb20739.css",
-    "main.js": "/github.io/static/js/main.2fefd8ed.js",
-    "static/media/chelsea1.png": "/github.io/static/media/chelsea1.c50ff23e7413a3da894c.png",
-    "static/media/chelsea2.png": "/github.io/static/media/chelsea2.e6130b96b3b73a952667.png",
-    "static/media/chelsea3.png": "/github.io/static/media/chelsea3.af89c1dfd9d9a70c90c7.png",
-    "static/media/chelsea_cover.jpeg": "/github.io/static/media/chelsea_cover.98b7f632d389f54531a7.jpeg",
-    "static/media/aboutMe.jpg": "/github.io/static/media/aboutMe.39af2eb711ce8646c4ae.jpg",
-    "index.html": "/github.io/index.html",
-    "main.8eb20739.css.map": "/github.io/static/css/main.8eb20739.css.map",
-    "main.2fefd8ed.js.map": "/github.io/static/js/main.2fefd8ed.js.map"
+    "main.css": "/munchicken1.github.io/static/css/main.8eb20739.css",
+    "main.js": "/munchicken1.github.io/static/js/main.39b61c7f.js",
+    "static/media/chelsea1.png": "/munchicken1.github.io/static/media/chelsea1.c50ff23e7413a3da894c.png",
+    "static/media/chelsea2.png": "/munchicken1.github.io/static/media/chelsea2.e6130b96b3b73a952667.png",
+    "static/media/chelsea3.png": "/munchicken1.github.io/static/media/chelsea3.af89c1dfd9d9a70c90c7.png",
+    "static/media/chelsea_cover.jpeg": "/munchicken1.github.io/static/media/chelsea_cover.98b7f632d389f54531a7.jpeg",
+    "static/media/aboutMe.jpg": "/munchicken1.github.io/static/media/aboutMe.39af2eb711ce8646c4ae.jpg",
+    "index.html": "/munchicken1.github.io/index.html",
+    "main.8eb20739.css.map": "/munchicken1.github.io/static/css/main.8eb20739.css.map",
+    "main.39b61c7f.js.map": "/munchicken1.github.io/static/js/main.39b61c7f.js.map"
   },
   "entrypoints": [
     "static/css/main.8eb20739.css",
-    "static/js/main.2fefd8ed.js"
+    "static/js/main.39b61c7f.js"
   ]
 }

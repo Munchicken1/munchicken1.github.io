@@ -26,16 +26,16 @@ export const Skills = {
   skills: {
     react: "React",
     javascript: "JavaScript",
-    rubyonrails: "Ruby on Rails",
     html: "HTML5",
     css: "CSS3",
-  },
-  skillsColor: {
-    html: "#E44D26",
-    css: "#1572B6",
-    javascript: "#F0DB4F",
-    rubyonrails: "#A62C39",
-    react: "#61DAFB",
+    python: "Python",
+    rubyonrails: "Ruby on Rails",
+    postgresql: "PostgreSQL",
+    firebase: "Firebase",
+    java: "Java",
+    aws: "AWS",
+    git: "Git",
+    typescript: "TypeScript"
   },
 }
 

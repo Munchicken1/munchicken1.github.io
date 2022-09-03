@@ -11,6 +11,9 @@ export const NavbarContainer = styled.div`
   top: 50%;
   transform: translateY(-50%);
   height: 50vh;
+  z-index: 2;
+
+  
 `
 
 export const NavbarList = styled.ul`

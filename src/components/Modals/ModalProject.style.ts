@@ -50,10 +50,10 @@ export const ModalProjectImageSlideContainer = styled.div`
 
 export const ModalProjectCarouselSlideContainer = styled.div`
   @media ${device.mobile} {
-    height: 45vh;
+    height: 35vh;
   }
 
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     height: 100%;
   }
 `

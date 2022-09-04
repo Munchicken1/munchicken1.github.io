@@ -53,7 +53,7 @@ const ModalProject: React.FC<IProps> = ({
           <Carousel
             infiniteLoop
             emulateTouch
-            autoPlay={false}
+            autoPlay={true}
             showThumbs={false}
             showArrows={viewport !== DeviceNameEnum.mobile ? true : false}
             renderArrowPrev={(handlePrev) => (

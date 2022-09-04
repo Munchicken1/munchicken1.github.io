@@ -5,75 +5,129 @@ import {
   SkillsList,
   SkillsListItem,
   SkillsListContainer,
-  SkillsIcons,
   SkillsText,
 } from "./Skills.style"
 import * as S from "../../constants/StringConstants"
+import {
+  AWSIcon,
+  CSSIcon,
+  FirebaseIcon,
+  GitIcon,
+  HTMLIcon,
+  JavaIcon,
+  JavaScriptIcon,
+  PSQLIcon,
+  PythonIcon,
+  RailsIcon,
+  ReactIcon,
+  TypeScriptIcon,
+} from "assets/Icons"
+import useViewport from "utilities/hooks/useViewport"
+import { DeviceNameEnum } from "style/media"
 
 const Skills = () => {
+  const viewport: DeviceNameEnum = useViewport()
+
   return (
     <SkillsContainer id="skills">
       <SkillsTitle>{S.Navigation.Skills}</SkillsTitle>
       <SkillsListContainer>
+        {/* First Row */}
         <SkillsList>
+          {/* React */}
           <SkillsListItem id={S.Skills.skills.react}>
-            {/* color={S.Skills.skillsColor.react} */}
-            <SkillsIcons className="devicon-react-original" />
-            <SkillsText>{S.Skills.skills.react}</SkillsText>
+            <ReactIcon />
+            {viewport !== DeviceNameEnum.mobile && (
+              <SkillsText>{S.Skills.skills.react}</SkillsText>
+            )}
           </SkillsListItem>
+          {/* TypeScript */}
           <SkillsListItem id={S.Skills.skills.typescript}>
-            <SkillsIcons className="devicon-typescript-plain" />
-            <SkillsText>{S.Skills.skills.typescript}</SkillsText>
+            <TypeScriptIcon />
+            {viewport !== DeviceNameEnum.mobile && (
+              <SkillsText>{S.Skills.skills.typescript}</SkillsText>
+            )}
           </SkillsListItem>
+          {/* JavaScript */}
           <SkillsListItem id={S.Skills.skills.javascript}>
-            {/* color={S.Skills.skillsColor.javascript} */}
-            <SkillsIcons className="devicon-javascript-plain" />
-            <SkillsText>{S.Skills.skills.javascript}</SkillsText>
+            <JavaScriptIcon />
+            {viewport !== DeviceNameEnum.mobile && (
+              <SkillsText>{S.Skills.skills.javascript}</SkillsText>
+            )}
           </SkillsListItem>
-          <SkillsListItem id={S.Skills.skills.html}>
-            {/* color={S.Skills.skillsColor.html} */}
-            <SkillsIcons className="devicon-html5-plain" />
-            <SkillsText>{S.Skills.skills.html}</SkillsText>
-          </SkillsListItem>
+          {/* CSS */}
           <SkillsListItem id={S.Skills.skills.css}>
-            {/* color={S.Skills.skillsColor.css} */}
-            <SkillsIcons className="devicon-css3-plain" />
-            <SkillsText>{S.Skills.skills.css}</SkillsText>
+            <CSSIcon />
+            {viewport !== DeviceNameEnum.mobile && (
+              <SkillsText>{S.Skills.skills.css}</SkillsText>
+            )}
           </SkillsListItem>
         </SkillsList>
+        {/* Second Row */}
         <SkillsList>
+          {/* Python */}
           <SkillsListItem id={S.Skills.skills.python}>
-            <SkillsIcons className="devicon-python-plain" />
-            <SkillsText>{S.Skills.skills.python}</SkillsText>
+            <PythonIcon />
+            {viewport !== DeviceNameEnum.mobile && (
+              <SkillsText>{S.Skills.skills.python}</SkillsText>
+            )}
           </SkillsListItem>
+          {/* Rails */}
           <SkillsListItem id={S.Skills.skills.rubyonrails}>
-            <SkillsIcons className="devicon-rails-plain" />
-            <SkillsText>{S.Skills.skills.rubyonrails}</SkillsText>
+            <RailsIcon />
+            {viewport !== DeviceNameEnum.mobile && (
+              <SkillsText>{S.Skills.skills.rubyonrails}</SkillsText>
+            )}
           </SkillsListItem>
+          {/* PostgreSQL */}
           <SkillsListItem id={S.Skills.skills.postgresql}>
-            <SkillsIcons className="devicon-postgresql-plain" />
-            <SkillsText>{S.Skills.skills.postgresql}</SkillsText>
+            <PSQLIcon />
+
+            {viewport !== DeviceNameEnum.mobile && (
+              <SkillsText>{S.Skills.skills.postgresql}</SkillsText>
+            )}
           </SkillsListItem>
-          <SkillsListItem id={S.Skills.skills.firebase}>
-            <SkillsIcons className="devicon-firebase-plain" />
-            <SkillsText>{S.Skills.skills.firebase}</SkillsText>
+          {/* HTML */}
+          <SkillsListItem id={S.Skills.skills.html}>
+            <HTMLIcon />
+
+            {viewport !== DeviceNameEnum.mobile && (
+              <SkillsText>{S.Skills.skills.html}</SkillsText>
+            )}
           </SkillsListItem>
         </SkillsList>
+        {/* Third Row */}
         <SkillsList>
-        <SkillsListItem id={S.Skills.skills.aws}>
-            <SkillsIcons className="devicon-amazonwebservices-plain" />
-            <SkillsText>{S.Skills.skills.aws}</SkillsText>
+          {/* AWS */}
+          <SkillsListItem id={S.Skills.skills.aws}>
+            <AWSIcon />
+
+            {viewport !== DeviceNameEnum.mobile && (
+              <SkillsText>{S.Skills.skills.aws}</SkillsText>
+            )}
           </SkillsListItem>
+          {/* Java */}
           <SkillsListItem id={S.Skills.skills.java}>
-            <SkillsIcons className="devicon-java-plain" />
-            <SkillsText>{S.Skills.skills.java}</SkillsText>
+            <JavaIcon />
+
+            {viewport !== DeviceNameEnum.mobile && (
+              <SkillsText>{S.Skills.skills.java}</SkillsText>
+            )}
           </SkillsListItem>
           <SkillsListItem id={S.Skills.skills.git}>
-            <SkillsIcons className="devicon-git-plain" />
-            <SkillsText>{S.Skills.skills.git}</SkillsText>
+            <GitIcon />
+            {viewport !== DeviceNameEnum.mobile && (
+              <SkillsText>{S.Skills.skills.git}</SkillsText>
+            )}
           </SkillsListItem>
-  
+          {/* Firebase */}
+          <SkillsListItem id={S.Skills.skills.firebase}>
+            <FirebaseIcon />
 
+            {viewport !== DeviceNameEnum.mobile && (
+              <SkillsText>{S.Skills.skills.firebase}</SkillsText>
+            )}
+          </SkillsListItem>
         </SkillsList>
       </SkillsListContainer>
     </SkillsContainer>

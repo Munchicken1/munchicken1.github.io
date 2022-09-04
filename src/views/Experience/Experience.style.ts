@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { TitleText } from "../../style/TextStyle.style"
 import { Container } from "../../style/Container.style"
+import { device } from "style/media"
 
 // Containers
 export const ExperiencesContainer = styled(Container)`
@@ -14,30 +15,61 @@ export const ExperiencesContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
 
   margin-top: 40px;
+
+  @media ${device.mobile} {
+    align-items: flex-start;
+  }
+  @media ${device.tablet} {
+    align-items: center;
+  }
 `
 export const ExperienceContainer = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: row;
   margin-bottom: 40px;
 
-  padding-left: 100px;
-  padding-right: 100px;
+  @media ${device.mobile} {
+    flex-direction: column;
+    padding: 0;
+  }
+  @media ${device.tablet} {
+    flex-direction: row;
+
+    padding-left: 100px;
+    padding-right: 100px;
+  }
 `
 
 export const ExperiencesTitleColumn = styled.div`
-  width: 40%;
   display: flex;
-  flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-end;
-  border-right: 2px solid ${(props) => props.theme.colors.charcoal};
 
-  text-align: right;
   padding: 10px;
+
+  @media ${device.mobile} {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    border-bottom: 2px solid ${(props) => props.theme.colors.charcoal};
+    border-right: none;
+    text-align: left;
+  }
+  @media ${device.tablet} {
+    width: 40%;
+    min-width: 20%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    border-bottom: 2px solid ${(props) => props.theme.colors.charcoal};
+    border-right: 2px solid ${(props) => props.theme.colors.charcoal};
+    border-bottom-right-radius: 5px;
+    text-align: right;
+  }
 `
 
 export const ExperiencesDescriptionColumn = styled.div`
@@ -46,8 +78,14 @@ export const ExperiencesDescriptionColumn = styled.div`
   flex-direction: column;
   justify-content: flex-start;
 
-  margin-left: 40px;
   padding: 10px;
+
+  @media ${device.mobile} {
+    margin-left: 10px;
+  }
+  @media ${device.tablet} {
+    margin-left: 40px;
+  }
 `
 export const ExperiencesJobDescriptionsContainer = styled.ul`
   display: flex;
@@ -55,7 +93,13 @@ export const ExperiencesJobDescriptionsContainer = styled.ul`
   list-style: disc;
 
   margin-top: 5px;
-  padding-left: 15px;
+
+  @media ${device.mobile} {
+    padding-left: 0;
+  }
+  @media ${device.tablet} {
+    padding-left: 15px;
+  }
 `
 
 export const ExperiencesJobDescriptionContainer = styled.li`
@@ -65,14 +109,55 @@ export const ExperiencesJobDescriptionContainer = styled.li`
 // Title Column
 export const ExperiencesTitleText = styled.p`
   font-weight: 700;
-  font-size: 24px;
 
-  margin-bottom: 10px;
+  @media ${device.mobile} {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 34px;
+
+    margin-bottom: 5px;
+  }
+  @media ${device.tablet} {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 24px;
+
+    margin-bottom: 10px;
+  }
+`
+
+export const ExperienceDateLocationContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media ${device.mobile} {
+    text-align: left;
+    margin-top: 8px;
+  }
+  @media ${device.tablet} {
+    text-align: right;
+    margin-top: 0;
+  }
+
+  /* @media ${device.mobile} {
+    width: 50%;
+  } */
 `
 export const ExperiencesDateText = styled.p``
 export const ExperiencesLocationText = styled.p``
 
 // Description Column
+export const ExperienceDescriptionHeaderRow = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+`
+
 export const ExperiencesJobTitleText = styled.p`
   font-size: 28px;
   font-weight: 600;

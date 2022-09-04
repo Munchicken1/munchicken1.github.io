@@ -10,6 +10,17 @@ import {
   SkillsIcon,
 } from "./Navbar.style"
 import * as S from "constants/StringConstants"
+import useWindowSize from "utilities/hooks/useWindowSize"
+import { DeviceNameEnum, size } from "style/media"
+import useViewport from "utilities/hooks/useViewport"
+
+enum NavigationItemEnum {
+  Home,
+  About,
+  Skills,
+  Projects,
+  Experience,
+}
 
 const Navbar = () => {
   const [refHome, setRefHome] = React.useState<HTMLElement | null>(null)
@@ -19,6 +30,10 @@ const Navbar = () => {
   const [refExperience, setRefExperience] = React.useState<HTMLElement | null>(
     null
   )
+
+  const [enumTouching, setEnumTouching] =
+    React.useState<NavigationItemEnum | null>(null)
+  const viewport: DeviceNameEnum = useViewport()
 
   React.useEffect(() => {
     setRefHome(document.getElementById("home"))
@@ -54,28 +69,61 @@ const Navbar = () => {
     }
   }
 
+  const handleTouchStart = (inputEnum: NavigationItemEnum) => {
+    setEnumTouching(inputEnum)
+  }
+
+  const handleTouchEnd = () => {
+    setEnumTouching(null)
+  }
+
   return (
     <NavbarContainer>
       <NavbarList>
-        <NavbarListItem onClick={handleClickHome}>
+        <NavbarListItem
+          onClick={handleClickHome}
+          isTouching={enumTouching === NavigationItemEnum.Home ? 1 : 0}
+          onTouchStart={() => handleTouchStart(NavigationItemEnum.Home)}
+          onTouchEnd={handleTouchEnd}
+        >
           <HomeIcon />
-          {S.Navigation.Home}
+          {viewport !== DeviceNameEnum.mobile && S.Navigation.Home}
         </NavbarListItem>
-        <NavbarListItem onClick={handleClickAbout}>
+        <NavbarListItem
+          onClick={handleClickAbout}
+          isTouching={enumTouching === NavigationItemEnum.About ? 1 : 0}
+          onTouchStart={() => handleTouchStart(NavigationItemEnum.About)}
+          onTouchEnd={handleTouchEnd}
+        >
           <AboutIcon />
-          {S.Navigation.About}
+          {viewport !== DeviceNameEnum.mobile && S.Navigation.About}
         </NavbarListItem>
-        <NavbarListItem onClick={handleClickSkills}>
+        <NavbarListItem
+          onClick={handleClickSkills}
+          isTouching={enumTouching === NavigationItemEnum.Skills ? 1 : 0}
+          onTouchStart={() => handleTouchStart(NavigationItemEnum.Skills)}
+          onTouchEnd={handleTouchEnd}
+        >
           <SkillsIcon />
-          {S.Navigation.Skills}
+          {viewport !== DeviceNameEnum.mobile && S.Navigation.Skills}
         </NavbarListItem>
-        <NavbarListItem onClick={handleClickProjects}>
+        <NavbarListItem
+          onClick={handleClickProjects}
+          isTouching={enumTouching === NavigationItemEnum.Projects ? 1 : 0}
+          onTouchStart={() => handleTouchStart(NavigationItemEnum.Projects)}
+          onTouchEnd={handleTouchEnd}
+        >
           <ProjectsIcon />
-          {S.Navigation.Projects}
+          {viewport !== DeviceNameEnum.mobile && S.Navigation.Projects}
         </NavbarListItem>
-        <NavbarListItem onClick={handleClickExperience}>
+        <NavbarListItem
+          onClick={handleClickExperience}
+          isTouching={enumTouching === NavigationItemEnum.Experience ? 1 : 0}
+          onTouchStart={() => handleTouchStart(NavigationItemEnum.Experience)}
+          onTouchEnd={handleTouchEnd}
+        >
           <ExperienceIcon />
-          {S.Navigation.Experience}
+          {viewport !== DeviceNameEnum.mobile && S.Navigation.Experience}
         </NavbarListItem>
       </NavbarList>
     </NavbarContainer>

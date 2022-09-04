@@ -6,6 +6,11 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        
+    }
+
+    p {
+        color: ${(props) => props.theme.colors.charcoal};
     }
 
     ul {
@@ -43,7 +48,8 @@ export const GlobalStyle = createGlobalStyle`
         transition: all 0.3s ease-out;
         :hover {
             g.social-svg-mask {
-                fill: ${(props) => props.theme.colors.moonComplementary} !important;
+                fill: ${(props) =>
+                  props.theme.colors.moonComplementary} !important;
             }
         }
     }

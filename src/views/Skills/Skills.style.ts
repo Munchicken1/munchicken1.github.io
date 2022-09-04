@@ -3,6 +3,7 @@ import { TitleText } from "../../style/TextStyle.style"
 import { Container } from "../../style/Container.style"
 import * as S from "../../constants/StringConstants"
 import { AnyARecord } from "dns"
+import { device } from "style/media"
 
 export const SkillsContainer = styled(Container)`
   padding: 40px;
@@ -31,45 +32,23 @@ export const SkillsListItem = styled.div<IProps>`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 150px;
-  width: 150px;
-  margin: 15px;
   color: ${(props) => props.theme.colors.charcoal};
   transition: 0.3s ease-out;
 
-  :hover {
-    ${(props) => {
-      if (props.id === S.Skills.skills.react) {
-        return css`
-          color: ${props.theme.colors.react};
-        `
-      } else if (props.id === S.Skills.skills.rubyonrails) {
-        return css`
-          color: ${props.theme.colors.rubyonrails};
-        `
-      } else if (props.id === S.Skills.skills.javascript) {
-        return css`
-          color: ${props.theme.colors.javascript};
-        `
-      } else if (props.id === S.Skills.skills.html) {
-        return css`
-          color: ${props.theme.colors.html};
-        `
-      } else if (props.id === S.Skills.skills.css) {
-        return css`
-          color: ${props.theme.colors.css};
-        `
-      } else {
-        return css`
-          color: ${props.theme.colors.moonComplementary};
-        `
-      }
-    }}
+  margin: 15px;
+
+  @media ${device.mobile} {
+    width: 50px;
+  }
+
+  @media ${device.tablet} {
+    width: 150px;
   }
 `
 
-export const SkillsIcons = styled.i`
-  font-size: 40px;
+export const SkillsText = styled.p`
+  margin-top: 10px;
+  font-size: 17px;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
 `
-
-export const SkillsText = styled.p``

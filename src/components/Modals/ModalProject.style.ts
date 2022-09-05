@@ -2,6 +2,8 @@ import styled, { css } from "styled-components"
 import { Dialog } from "@mui/material"
 import CloseIcon from "@mui/icons-material/Close"
 import { device } from "style/media"
+import Button, { ButtonProps } from "@mui/material/Button"
+import { IProject } from "constants/ProjectConstants"
 
 export const ModalProjectDialog = styled(Dialog)`
   /* min-width: 1000px; */
@@ -64,7 +66,11 @@ export const ModalProjectImage = styled.img`
   object-fit: cover;
 `
 
-export const ModalProjectBodyContainer = styled.div`
+interface IModalProjectThemeColor {
+  themeColor: string
+}
+
+export const ModalProjectBodyContainer = styled.div<IModalProjectThemeColor>`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -85,12 +91,42 @@ export const ModalProjectBodyContainer = styled.div`
     border-top: none;
     border-left: 1px solid black;
   }
+
+  ${(props) => {
+    if (props.themeColor) {
+      return css`
+        ${ModalProjectTitleText} {
+          color: ${props.themeColor};
+        }
+        ${ModalButton} {
+          background-color: ${props.themeColor};
+          background-image: linear-gradient(
+            315deg,
+            ${(props) => props.theme.colors.moon} 0%,
+            ${props.themeColor} 74%
+          );
+          ::before,
+          ::after {
+            background: ${props.themeColor};
+          }
+        }
+        ${ModalButtonSpan} {
+          :hover {
+            color: ${props.themeColor};
+          }
+          ::before,
+          ::after {
+            background: ${props.themeColor};
+          }
+        }
+      `
+    }
+  }}
 `
 
 export const ModalProjectTitleText = styled.p`
   font-size: 50px;
   font-weight: 600;
-  color: ${(props) => props.theme.colors.chelsea};
 `
 
 export const ModalProjectContentText = styled.p`
@@ -122,6 +158,93 @@ export const ModalCloseIcon = styled(CloseIcon)`
     :hover {
       background: rgba(0, 0, 0, 0.6);
     }
+  }
+`
+
+export const CustomButton = styled.button`
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 3px;
+  padding: 10px 25px;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    5px 5px 10px 0px rgba(0, 0, 0, 0.1), 3px 3px 4px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+`
+
+export const ModalButton = styled(CustomButton)`
+  line-height: 42px;
+  padding: 0;
+  border: none;
+
+  :before,
+  :after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    /* box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
+      -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+      inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5),
+      inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3); */
+    transition: all 0.3s ease;
+  }
+  :before {
+    height: 0%;
+    width: 2px;
+  }
+  :after {
+    width: 0%;
+    height: 2px;
+  }
+  :hover:before {
+    height: 100%;
+  }
+  :hover:after {
+    width: 100%;
+  }
+  :hover {
+    background: transparent;
+  }
+`
+export const ModalButtonSpan = styled.span`
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+
+  :before,
+  :after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    /* box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
+      -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+      inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5),
+      inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3); */
+    transition: all 0.3s ease;
+  }
+  :before {
+    width: 2px;
+    height: 0%;
+  }
+  :after {
+    height: 2px;
+    width: 0%;
+  }
+  :hover:before {
+    height: 100%;
+  }
+  :hover:after {
+    width: 100%;
   }
 `
 

@@ -76,7 +76,7 @@ const ImageMarked = styled("span")(({ theme }) => ({
 
 interface IProps {
   project: IProject
-  handleClickProjectBanner: (inputProject: IProject) => void
+  handleClickProjectBanner: () => void
 }
 
 const ProjectBanner: React.FC<IProps> = ({
@@ -91,7 +91,7 @@ const ProjectBanner: React.FC<IProps> = ({
         style={{
           width: "100%",
         }}
-        onClick={() => handleClickProjectBanner(project)}
+        onClick={handleClickProjectBanner}
       >
         <ImageSrc style={{ backgroundImage: `url(${project.bannerImage})` }} />
         <ImageBackdrop className="MuiImageBackdrop-root" />

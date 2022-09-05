@@ -8,6 +8,7 @@ import {
 const initialState: IModalProjectReducerState = {
   isOpen: false,
   currentProject: null,
+  currentProjectIndex: null,
 }
 
 const modalProjectReducer = (
@@ -20,11 +21,11 @@ const modalProjectReducer = (
         ...state,
         isOpen: true,
         currentProject: action.payload.currentProject,
+        currentProjectIndex: action.payload.currentProjectIndex,
       }
     case CLOSE_MODAL_PROJECT:
       return {
-        ...state,
-        isOpen: false,
+        ...initialState,
       }
     default:
       return {

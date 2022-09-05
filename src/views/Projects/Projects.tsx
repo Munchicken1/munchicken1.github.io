@@ -1,22 +1,18 @@
-import React from "react"
+import React, { useEffect } from "react"
 import {
   ProjectsContainer,
   ProjectsTitle,
   ProjectsList,
-  ProjectsListItem,
-  ProjectsListImage,
 } from "./Projects.style"
 import * as S from "../../constants/StringConstants"
 import { connect as reduxConnect } from "react-redux"
 import { bindActionCreators } from "redux"
 import { openModalProject } from "store/modalProject/modalProject_actions"
-import projectChelsea from "assets/project_chelsea_thumb.png"
 import {
   IProject,
   projects as ProjectConstants,
 } from "constants/ProjectConstants"
 import ProjectBanner from "./ProjectBanner"
-import Box from "@mui/material/Box"
 import { IOpenModalProjectPayload } from "store/modalProject/modalProject_types"
 
 interface IReduxProps {
@@ -24,9 +20,29 @@ interface IReduxProps {
 }
 
 const Projects: React.FC<IReduxProps> = ({ openModalProject }) => {
-  const handleClickProjectBanner = (inputProject: IProject) => {
+  useEffect(() => {
+    window.addEventListener("popstate", handlePopState)
+    return () => {
+      window.removeEventListener("popstate", handlePopState)
+    }
+  }, [])
+
+  const handlePopState = (e) => {
+    if (e?.state?.projectIndex !== undefined) {
+      openModalProject({
+        currentProject: ProjectConstants[Number(e?.state?.projectIndex)],
+        currentProjectIndex: Number(e?.state?.projectIndex),
+      })
+    }
+  }
+
+  const handleClickProjectBanner = (
+    inputProject: IProject,
+    inputProjectIndex: number
+  ) => {
     const payload: IOpenModalProjectPayload = {
       currentProject: inputProject,
+      currentProjectIndex: inputProjectIndex,
     }
     openModalProject(payload)
   }
@@ -35,10 +51,13 @@ const Projects: React.FC<IReduxProps> = ({ openModalProject }) => {
     <ProjectsContainer id="projects">
       <ProjectsTitle>{S.Projects.title}</ProjectsTitle>
       <ProjectsList>
-        {ProjectConstants.map((project) => (
+        {ProjectConstants.map((project: IProject, index: number) => (
           <ProjectBanner
             project={project}
-            handleClickProjectBanner={handleClickProjectBanner}
+            handleClickProjectBanner={() =>
+              handleClickProjectBanner(project, index)
+            }
+            key={project.title}
           />
         ))}
       </ProjectsList>

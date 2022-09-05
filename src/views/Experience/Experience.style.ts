@@ -171,6 +171,6 @@ export const ExperiencesJobTitleText = styled.p`
 `
 export const ExperiencesJobDescriptionText = styled.p`
   font-size: 18px;
-  line-height: 26px;
+  line-height: 30px;
   font-family: "Roboto", sans-serif;
 `

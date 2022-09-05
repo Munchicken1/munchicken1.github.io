@@ -5,6 +5,7 @@ import { IProject } from "constants/ProjectConstants"
 export interface IModalProjectReducerState {
   isOpen: boolean
   currentProject: IProject | null
+  currentProjectIndex: number | null
 }
 
 // Action Types
@@ -13,6 +14,7 @@ export const OPEN_MODAL_PROJECT = "OPEN_MODAL_PROJECT"
 
 export interface IOpenModalProjectPayload {
   currentProject: IProject
+  currentProjectIndex: number
 }
 
 interface OpenModalProjectAction {

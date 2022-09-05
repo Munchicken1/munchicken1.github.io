@@ -27,5 +27,6 @@ export const theme: DefaultTheme = {
     purple: "#8c7da6",
     limeGreen: "#dcedb3",
     teaGreen: "#9aa67d",
+    api: "#273473",
   },
 }

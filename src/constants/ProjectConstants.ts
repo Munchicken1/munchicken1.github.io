@@ -18,6 +18,7 @@ import api3 from "assets/api3.png"
 import pns1 from "assets/pns1.png"
 import pns2 from "assets/pns2.png"
 import pns3 from "assets/pns3.png"
+import { theme } from "style/Theme"
 
 interface ITech {
   logoFile: () => JSX.Element
@@ -31,6 +32,7 @@ export interface IProject {
   title: string
   content: string
   techs: ITech[]
+  themeColor: string
 }
 
 export const projects: IProject[] = [
@@ -47,6 +49,7 @@ export const projects: IProject[] = [
       { logoFile: CSSIcon, name: S.Technologies.css },
       { logoFile: PSQLIcon, name: S.Technologies.postgresql },
     ],
+    themeColor: theme.colors.chelsea,
   },
   {
     bannerImage: APICover,
@@ -59,6 +62,7 @@ export const projects: IProject[] = [
       { logoFile: HTMLIcon, name: S.Technologies.html },
       { logoFile: CSSIcon, name: S.Technologies.css },
     ],
+    themeColor: theme.colors.api,
   },
   {
     bannerImage: PNSCover,
@@ -71,5 +75,6 @@ export const projects: IProject[] = [
       { logoFile: HTMLIcon, name: S.Technologies.html },
       { logoFile: CSSIcon, name: S.Technologies.css },
     ],
+    themeColor: theme.colors.moonDark,
   },
 ]

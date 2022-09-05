@@ -28,6 +28,7 @@ declare module "styled-components" {
       purple: string
       limeGreen: string
       teaGreen: string
+      api: string
     }
   }
 }

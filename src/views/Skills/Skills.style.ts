@@ -21,6 +21,7 @@ export const SkillsList = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
+  margin-bottom: 25px;
 `
 
 interface IProps {

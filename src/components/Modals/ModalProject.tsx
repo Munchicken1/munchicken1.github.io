@@ -13,9 +13,6 @@ import {
   ModalProjectPrevButton,
   ModalProjectCloseButtonContainer,
 } from "./ModalProject.style"
-import chelsea1 from "assets/chelsea1.png"
-import chelsea2 from "assets/chelsea2.png"
-import chelsea3 from "assets/chelsea3.png"
 import { connect as reduxConnect } from "react-redux"
 import { StoreState } from "store"
 import { closeModalProject } from "store/modalProject/modalProject_actions"
@@ -25,15 +22,18 @@ import { Carousel } from "react-responsive-carousel"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import useViewport from "utilities/hooks/useViewport"
 import { DeviceNameEnum } from "style/media"
+import { IProject } from "constants/ProjectConstants"
 
 interface IProps extends IReduxProps {}
 
 interface IReduxProps {
+  currentProject: IProject | null
   isModalProjectOpen: boolean
   closeModalProject: () => void
 }
 
 const ModalProject: React.FC<IProps> = ({
+  currentProject,
   isModalProjectOpen,
   closeModalProject,
 }) => {
@@ -67,40 +67,20 @@ const ModalProject: React.FC<IProps> = ({
               </ModalProjectNextButton>
             )}
           >
-            <ModalProjectCarouselSlideContainer>
-              <ModalProjectImage src={chelsea1} />
-            </ModalProjectCarouselSlideContainer>
-            <ModalProjectCarouselSlideContainer>
-              <ModalProjectImage src={chelsea2} />
-            </ModalProjectCarouselSlideContainer>
-            <ModalProjectCarouselSlideContainer>
-              <ModalProjectImage src={chelsea3} />
-            </ModalProjectCarouselSlideContainer>
+            {currentProject.projectImages.map((image) => (
+              <ModalProjectCarouselSlideContainer>
+                <ModalProjectImage src={image} />
+              </ModalProjectCarouselSlideContainer>
+            ))}
           </Carousel>
         </ModalProjectImageSlideContainer>
         <ModalProjectBodyContainer>
           <ModalProjectCloseButtonContainer onClick={closeModalProject}>
             <ModalCloseIcon />
           </ModalProjectCloseButtonContainer>
-          <ModalProjectTitleText>
-            {S.Projects.projectTitle}
-          </ModalProjectTitleText>
+          <ModalProjectTitleText>{currentProject.title}</ModalProjectTitleText>
           <ModalProjectContentText>
-            {S.Projects.projectDescription}
-            {S.Projects.projectDescription}
-            {S.Projects.projectDescription}
-            {S.Projects.projectDescription}
-            {S.Projects.projectDescription}
-            {S.Projects.projectDescription}
-            {S.Projects.projectDescription}
-            {S.Projects.projectDescription}
-            {S.Projects.projectDescription}
-            {S.Projects.projectDescription}
-            {S.Projects.projectDescription}
-            {S.Projects.projectDescription}
-            {S.Projects.projectDescription}
-            {S.Projects.projectDescription}
-            {S.Projects.projectDescription}
+            {currentProject.content}
           </ModalProjectContentText>
         </ModalProjectBodyContainer>
       </ModalProjectContainer>
@@ -110,6 +90,7 @@ const ModalProject: React.FC<IProps> = ({
 
 const mapStateToProps = (state: StoreState) => ({
   isModalProjectOpen: state.modalProjectReducer.isOpen,
+  currentProject: state.modalProjectReducer.currentProject,
 })
 
 const mapDispatchToProps = (dispatch: any) =>

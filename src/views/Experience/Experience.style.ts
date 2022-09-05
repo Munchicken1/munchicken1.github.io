@@ -6,7 +6,13 @@ import { device } from "style/media"
 // Containers
 export const ExperiencesContainer = styled(Container)`
   justify-content: flex-start;
-  padding: 40px;
+
+  @media ${device.mobile} {
+    padding: 40px 20px;
+  }
+  @media ${device.tablet} {
+    padding: 40px;
+  }
 `
 export const ExperiencesSectionTitle = styled(TitleText)``
 
@@ -59,6 +65,7 @@ export const ExperiencesTitleColumn = styled.div`
     text-align: left;
   }
   @media ${device.tablet} {
+    flex: 0 1;
     width: 40%;
     min-width: 20%;
     flex-direction: column;
@@ -164,5 +171,6 @@ export const ExperiencesJobTitleText = styled.p`
 `
 export const ExperiencesJobDescriptionText = styled.p`
   font-size: 18px;
-  line-height: 24px;
+  line-height: 26px;
+  font-family: "Roboto", sans-serif;
 `

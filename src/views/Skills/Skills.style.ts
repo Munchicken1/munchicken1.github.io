@@ -9,7 +9,22 @@ export const SkillsContainer = styled(Container)`
   padding: 40px;
 `
 
-export const SkillsTitle = styled(TitleText)``
+export const SkillsTitle = styled(TitleText)`
+  position: relative;
+  padding-bottom: 20px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 48px;
+    height: 2px;
+    left: 50%;
+    bottom: -3px;
+    margin: 0 -24px;
+    background: #aaa;
+  }
+`
 
 export const SkillsListContainer = styled.div`
   padding: 40px 20px 0px 20px;

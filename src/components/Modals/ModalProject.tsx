@@ -14,12 +14,12 @@ import {
   ModalProjectCloseButtonContainer,
   ModalButton,
   ModalButtonSpan,
+  ModalProjectButtonContainer,
 } from "./ModalProject.style"
 import { connect as reduxConnect } from "react-redux"
 import { StoreState } from "store"
 import { closeModalProject } from "store/modalProject/modalProject_actions"
 import { bindActionCreators } from "redux"
-import * as S from "constants/StringConstants"
 import { Carousel } from "react-responsive-carousel"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import useViewport from "utilities/hooks/useViewport"
@@ -110,9 +110,13 @@ const ModalProject: React.FC<IProps> = ({
           <ModalProjectContentText>
             {currentProject.content}
           </ModalProjectContentText>
-          <ModalButton>
-            <ModalButtonSpan>See Publication</ModalButtonSpan>
-          </ModalButton>
+          <ModalProjectButtonContainer>
+            <a href={currentProject.websiteUrl} target="_blank">
+              <ModalButton>
+                <ModalButtonSpan>See Publication</ModalButtonSpan>
+              </ModalButton>
+            </a>
+          </ModalProjectButtonContainer>
         </ModalProjectBodyContainer>
       </ModalProjectContainer>
     </ModalProjectDialog>

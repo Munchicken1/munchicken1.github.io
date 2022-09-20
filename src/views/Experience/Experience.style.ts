@@ -14,7 +14,22 @@ export const ExperiencesContainer = styled(Container)`
     padding: 40px;
   }
 `
-export const ExperiencesSectionTitle = styled(TitleText)``
+export const ExperiencesSectionTitle = styled(TitleText)`
+  position: relative;
+  padding-bottom: 20px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 48px;
+    height: 2px;
+    left: 50%;
+    bottom: -3px;
+    margin: 0 -24px;
+    background: #aaa;
+  }
+`
 
 export const ExperiencesContentContainer = styled.div`
   width: 100%;

@@ -2,8 +2,6 @@ import styled, { css } from "styled-components"
 import { Dialog } from "@mui/material"
 import CloseIcon from "@mui/icons-material/Close"
 import { device } from "style/media"
-import Button, { ButtonProps } from "@mui/material/Button"
-import { IProject } from "constants/ProjectConstants"
 
 export const ModalProjectDialog = styled(Dialog)`
   /* min-width: 1000px; */
@@ -74,7 +72,7 @@ export const ModalProjectBodyContainer = styled.div<IModalProjectThemeColor>`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   overflow-y: auto;
   padding: 40px;
 
@@ -133,6 +131,8 @@ export const ModalProjectContentText = styled.p`
   margin-top: 35px;
   font-size: 20px;
   line-height: 25px;
+  margin-bottom: 50px;
+  font-family: "Roboto", sans-serif;
 `
 
 export const ModalProjectCloseButtonContainer = styled.div`
@@ -272,6 +272,24 @@ const ArrowButtonCSS = css`
   :hover {
     background: rgba(0, 0, 0, 0.6);
   }
+`
+
+export const ModalProjectButtonContainer = styled.div`
+  position: absolute;
+
+  @media ${device.mobile} {
+    right: 40px;
+    bottom: 40px;
+  }
+
+  @media ${device.tablet} {
+    right: auto;
+    bottom: 20px;
+  }
+
+  @media ${device.desktop} {
+    /* transform: translateX(-32.5px); */
+  } ;
 `
 
 export const ModalProjectPrevButton = styled.button`

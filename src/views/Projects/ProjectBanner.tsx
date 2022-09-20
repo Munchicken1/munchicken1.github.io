@@ -2,11 +2,11 @@ import * as React from "react"
 import { styled } from "@mui/material/styles"
 import ButtonBase from "@mui/material/ButtonBase"
 import Typography from "@mui/material/Typography"
-import chelseaCover from "assets/chelsea_cover.jpeg"
-import { connect as reduxConnect } from "react-redux"
-import { bindActionCreators } from "redux"
-import { openModalProject } from "store/modalProject/modalProject_actions"
 import { IProject } from "constants/ProjectConstants"
+import {
+  ProjectBannerIconsContainer,
+  ProjectBannerIcon,
+} from "./Projects.style"
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: "relative",
@@ -94,6 +94,11 @@ const ProjectBanner: React.FC<IProps> = ({
         onClick={handleClickProjectBanner}
       >
         <ImageSrc style={{ backgroundImage: `url(${project.bannerImage})` }} />
+        <ProjectBannerIconsContainer>
+          {project.techs.map((techs) => (
+            <ProjectBannerIcon className={techs.iconClassName} />
+          ))}
+        </ProjectBannerIconsContainer>
         <ImageBackdrop className="MuiImageBackdrop-root" />
         <Image>
           <Typography

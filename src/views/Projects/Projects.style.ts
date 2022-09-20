@@ -27,7 +27,21 @@ export const ProjectsContainer = styled(Container)`
 `
 
 export const ProjectsTitle = styled(TitleText)`
-  padding: 30px;
+  position: relative;
+  padding: 20px;
+  margin-bottom: 40px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 48px;
+    height: 2px;
+    left: 50%;
+    bottom: -3px;
+    margin: 0 -24px;
+    background: #aaa;
+  }
 `
 
 export const ProjectsList = styled.div`
@@ -42,5 +56,33 @@ export const ProjectsList = styled.div`
   }
   @media ${device.tablet} {
     width: 80%;
+  }
+`
+
+export const ProjectBannerIconsContainer = styled.div`
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  padding: 5px;
+  border-radius: 5px;
+
+  @media ${device.mobile} {
+    top: 5px;
+    right: 5px;
+  }
+  @media ${device.tablet} {
+    top: 10px;
+    right: 10px;
+  }
+`
+export const ProjectBannerIcon = styled.i`
+  color: white;
+  padding: 5px;
+
+  @media ${device.mobile} {
+    font-size: 25px;
+  }
+  @media ${device.tablet} {
+    font-size: 35px;
   }
 `

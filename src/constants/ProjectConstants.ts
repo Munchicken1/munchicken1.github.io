@@ -23,6 +23,7 @@ import { theme } from "style/Theme"
 interface ITech {
   logoFile: () => JSX.Element
   name: string
+  iconClassName: string
 }
 
 export interface IProject {
@@ -41,13 +42,34 @@ export const projects: IProject[] = [
     websiteUrl: "https://www.chelseaframingproducts.com",
     projectImages: [chelsea1, chelsea2, chelsea3],
     title: "Chelsea Framing Products",
-    content: "lorem",
+    content:
+      "Website developed for a picture frame/moulding company as a fullstack developer. Tools used include Ruby on Rails, JavaScript, CSS3, HTML5, and PostgreSQL.",
     techs: [
-      { logoFile: JavaScriptIcon, name: S.Technologies.javascript },
-      { logoFile: RailsIcon, name: S.Technologies.rubyonrails },
-      { logoFile: HTMLIcon, name: S.Technologies.html },
-      { logoFile: CSSIcon, name: S.Technologies.css },
-      { logoFile: PSQLIcon, name: S.Technologies.postgresql },
+      {
+        logoFile: JavaScriptIcon,
+        name: S.Technologies.javascript,
+        iconClassName: "devicon-javascript-plain",
+      },
+      {
+        logoFile: RailsIcon,
+        name: S.Technologies.rubyonrails,
+        iconClassName: "devicon-rails-plain",
+      },
+      {
+        logoFile: HTMLIcon,
+        name: S.Technologies.html,
+        iconClassName: "devicon-html5-plain",
+      },
+      {
+        logoFile: CSSIcon,
+        name: S.Technologies.css,
+        iconClassName: "devicon-css3-plain",
+      },
+      {
+        logoFile: PSQLIcon,
+        name: S.Technologies.postgresql,
+        iconClassName: "devicon-postgresql-plain",
+      },
     ],
     themeColor: theme.colors.chelsea,
   },
@@ -56,11 +78,24 @@ export const projects: IProject[] = [
     websiteUrl: "https://www.apinow.com",
     projectImages: [api1, api2, api3],
     title: "Advanced Plastics, Inc.",
-    content: "lorem",
+    content:
+      "Website developed for a plastic resin distribution company. Tools used include JavaScript, CSS3, and HTML5.",
     techs: [
-      { logoFile: JavaScriptIcon, name: S.Technologies.javascript },
-      { logoFile: HTMLIcon, name: S.Technologies.html },
-      { logoFile: CSSIcon, name: S.Technologies.css },
+      {
+        logoFile: JavaScriptIcon,
+        name: S.Technologies.javascript,
+        iconClassName: "devicon-javascript-plain",
+      },
+      {
+        logoFile: HTMLIcon,
+        name: S.Technologies.html,
+        iconClassName: "devicon-html5-plain",
+      },
+      {
+        logoFile: CSSIcon,
+        name: S.Technologies.css,
+        iconClassName: "devicon-css3-plain",
+      },
     ],
     themeColor: theme.colors.api,
   },
@@ -69,11 +104,24 @@ export const projects: IProject[] = [
     websiteUrl: "http://www.pnsmgn.com",
     projectImages: [pns1, pns2, pns3],
     title: "PNS Management, Inc.",
-    content: "lorem",
+    content:
+      "Website developed for a logistics company's finance branch. Tools used include JavaScript, CSS3, and HTML5.",
     techs: [
-      { logoFile: JavaScriptIcon, name: S.Technologies.javascript },
-      { logoFile: HTMLIcon, name: S.Technologies.html },
-      { logoFile: CSSIcon, name: S.Technologies.css },
+      {
+        logoFile: JavaScriptIcon,
+        name: S.Technologies.javascript,
+        iconClassName: "devicon-javascript-plain",
+      },
+      {
+        logoFile: HTMLIcon,
+        name: S.Technologies.html,
+        iconClassName: "devicon-html5-plain",
+      },
+      {
+        logoFile: CSSIcon,
+        name: S.Technologies.css,
+        iconClassName: "devicon-css3-plain",
+      },
     ],
     themeColor: theme.colors.moonDark,
   },

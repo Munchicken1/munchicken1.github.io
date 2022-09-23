@@ -5,16 +5,16 @@ import {
   AboutTextContainer,
   AboutText,
   AboutImage,
-  AboutTitle
+  AboutTitle,
 } from "./About.style"
-import Selfie from '../../assets/aboutMe.jpg'
+import Selfie from "../../assets/SJ_selfie.jpg"
 import * as S from "constants/StringConstants"
 
 const About = () => {
   return (
     <AboutContainer id="about">
       <AboutImageContainer>
-        <AboutImage src={Selfie} alt='Selfie' />
+        <AboutImage src={Selfie} alt="Selfie" />
       </AboutImageContainer>
       <AboutTextContainer>
         <AboutTitle>{S.About.title}</AboutTitle>

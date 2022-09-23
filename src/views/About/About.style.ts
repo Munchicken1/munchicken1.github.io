@@ -40,6 +40,7 @@ export const AboutImageContainer = styled.div`
 export const AboutImage = styled.img`
   width: 100%;
   height: 100%;
+  border-radius: 5px;
 `
 
 export const AboutTextContainer = styled.div`

@@ -94,12 +94,12 @@ const ProjectBanner: React.FC<IProps> = ({
         onClick={handleClickProjectBanner}
       >
         <ImageSrc style={{ backgroundImage: `url(${project.bannerImage})` }} />
+        <ImageBackdrop className="MuiImageBackdrop-root" />
         <ProjectBannerIconsContainer>
           {project.techs.map((techs) => (
             <ProjectBannerIcon className={techs.iconClassName} />
           ))}
         </ProjectBannerIconsContainer>
-        <ImageBackdrop className="MuiImageBackdrop-root" />
         <Image>
           <Typography
             component="span"

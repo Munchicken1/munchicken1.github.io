@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <HomeContainer id="home">
       <HomeBannerContainer>
-          <HomeBannerText>SJ</HomeBannerText>
+        <HomeBannerText>SJ</HomeBannerText>
       </HomeBannerContainer>
       <HomeText>{S.Home.title}</HomeText>
       <IconsContainer>

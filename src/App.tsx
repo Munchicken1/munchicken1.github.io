@@ -8,6 +8,7 @@ import Home from "views/Home/Home"
 import Projects from "views/Projects/Projects"
 import Skills from "views/Skills/Skills"
 import Providers from "./utilities/providers/Providers"
+import ThemeChanger from "components/ThemeChanger/ThemeChanger"
 import NavbarMobile from "components/Navbar/NavbarMobile"
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
     <Providers>
       <AppContainer>
         <Navbar />
+        <ThemeChanger />
         <Home />
         <About />
         <Skills />

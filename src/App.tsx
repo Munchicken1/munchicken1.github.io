@@ -10,6 +10,7 @@ import Skills from "views/Skills/Skills"
 import Providers from "./utilities/providers/Providers"
 import ThemeChanger from "components/ThemeChanger/ThemeChanger"
 import NavbarMobile from "components/Navbar/NavbarMobile"
+import { theme } from "style/Theme"
 
 function App() {
   const [viewport, setViewport] = useState(
@@ -19,11 +20,20 @@ function App() {
     setViewport(window.innerWidth || document.documentElement.clientWidth)
   })
 
+  const [selectedTheme, setSelectedTheme] = useState(theme)
+
+  const handleThemeChanger = (theme) => {
+    setSelectedTheme(theme)
+  }
+
   return (
-    <Providers>
+    <Providers selectedTheme={selectedTheme}>
       <AppContainer>
         <Navbar />
-        <ThemeChanger />
+        <ThemeChanger
+          selectedTheme={selectedTheme}
+          changeTheme={handleThemeChanger}
+        />
         <Home />
         <About />
         <Skills />

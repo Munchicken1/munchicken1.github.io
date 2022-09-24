@@ -9,7 +9,7 @@ import ModalProvider from "./ModalProvider"
 const Providers = (props) => {
   return (
     <StoreProvider store={store}>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={props.selectedTheme}>
         <ModalProvider>
           <GlobalStyle />
           {props.children}

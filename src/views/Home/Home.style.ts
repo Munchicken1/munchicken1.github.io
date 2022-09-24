@@ -64,7 +64,7 @@ export const HomeBannerText = styled.p`
 export const HomeText = styled.p`
   color: ${(props) => props.theme.colors.charcoal};
   font-size: 42px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Aboreto";
   font-weight: 600;
 `
 

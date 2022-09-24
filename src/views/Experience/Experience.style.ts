@@ -131,7 +131,7 @@ export const ExperiencesJobDescriptionContainer = styled.li`
 // Title Column
 export const ExperiencesTitleText = styled.p`
   font-weight: 700;
-
+  font-family: "Barlow", sans-serif;
   @media ${device.mobile} {
     display: flex;
     flex-direction: row;
@@ -168,8 +168,12 @@ export const ExperienceDateLocationContainer = styled.div`
     width: 50%;
   } */
 `
-export const ExperiencesDateText = styled.p``
-export const ExperiencesLocationText = styled.p``
+export const ExperiencesDateText = styled.p`
+  font-family: "Barlow", sans-serif;
+`
+export const ExperiencesLocationText = styled.p`
+  font-family: "Barlow", sans-serif;
+`
 
 // Description Column
 export const ExperienceDescriptionHeaderRow = styled.div`
@@ -183,9 +187,10 @@ export const ExperienceDescriptionHeaderRow = styled.div`
 export const ExperiencesJobTitleText = styled.p`
   font-size: 28px;
   font-weight: 600;
+  font-family: "Barlow", sans-serif;
 `
 export const ExperiencesJobDescriptionText = styled.p`
   font-size: 18px;
   line-height: 30px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Quicksand", sans-serif;
 `

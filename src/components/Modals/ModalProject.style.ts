@@ -123,8 +123,15 @@ export const ModalProjectBodyContainer = styled.div<IModalProjectThemeColor>`
 `
 
 export const ModalProjectTitleText = styled.p`
-  font-size: 50px;
   font-weight: 600;
+  font-family: "Barlow";
+
+  @media ${device.mobile} {
+    font-size: 40px;
+  }
+  @media ${device.tablet} {
+    font-size: 50px;
+  }
 `
 
 export const ModalProjectContentText = styled.p`
@@ -132,7 +139,7 @@ export const ModalProjectContentText = styled.p`
   font-size: 20px;
   line-height: 25px;
   margin-bottom: 50px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Quicksand", sans-serif;
 `
 
 export const ModalProjectCloseButtonContainer = styled.div`

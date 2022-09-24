@@ -8,6 +8,7 @@ import {
   HomeBannerContainer,
 } from "./Home.style"
 import * as S from "../../constants/StringConstants"
+import Canvas from "components/Canvas/Canvas"
 
 const Home = () => {
   return (

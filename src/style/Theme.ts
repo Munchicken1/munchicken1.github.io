@@ -2,6 +2,7 @@ import { DefaultTheme } from "styled-components"
 
 export const theme: DefaultTheme = {
   colors: {
+    currentTheme: "Moon",
     black: "#000000",
     white: "#FFFFFF",
     moon: "#edddb3",
@@ -28,11 +29,13 @@ export const theme: DefaultTheme = {
     limeGreen: "#dcedb3",
     teaGreen: "#9aa67d",
     api: "#273473",
+    greyWater: "#888",
   },
 }
 
 export const secondTheme = {
   colors: {
+    currentTheme: "Violet",
     black: "#000000",
     white: "#FFFFFF",
     moon: "#c9b3ed",
@@ -59,11 +62,13 @@ export const secondTheme = {
     limeGreen: "#dcedb3",
     teaGreen: "#9aa67d",
     api: "#273473",
+    greyWater: "#888",
   },
 }
 
 export const thirdTheme = {
   colors: {
+    currentTheme: "GreenTea",
     black: "#000000",
     white: "#FFFFFF",
     moon: "#9aa67d",
@@ -90,5 +95,6 @@ export const thirdTheme = {
     limeGreen: "#dcedb3",
     teaGreen: "#edddb3",
     api: "#273473",
+    greyWater: "#888",
   },
 }

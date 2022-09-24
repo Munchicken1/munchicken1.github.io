@@ -58,7 +58,7 @@ export const AboutText = styled.p`
   font-size: 18px;
   line-height: 200%;
   color: ${(props) => props.theme.colors.charcoal};
-  font-family: "Roboto", sans-serif;
+  font-family: "Quicksand", sans-serif;
 
   margin-top: 20px;
 `

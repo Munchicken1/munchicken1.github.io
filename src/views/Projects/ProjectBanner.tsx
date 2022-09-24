@@ -97,7 +97,10 @@ const ProjectBanner: React.FC<IProps> = ({
         <ImageBackdrop className="MuiImageBackdrop-root" />
         <ProjectBannerIconsContainer>
           {project.techs.map((techs) => (
-            <ProjectBannerIcon className={techs.iconClassName} />
+            <ProjectBannerIcon
+              className={techs.iconClassName}
+              key={techs.iconClassName}
+            />
           ))}
         </ProjectBannerIconsContainer>
         <Image>

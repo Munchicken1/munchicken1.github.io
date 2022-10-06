@@ -16,12 +16,26 @@ import {
   ExperienceDateLocationContainer,
   ExperienceDescriptionHeaderRow,
 } from "./Experience.style"
-import * as S from "../../constants/StringConstants"
 import useViewport from "utilities/hooks/useViewport"
 import { DeviceNameEnum } from "style/media"
+import * as EN from "../../constants/StringConstants"
+import * as KR from "../../constants/StringConstantsKR"
+import { connect as reduxConnect } from "react-redux"
+import { StoreState } from "store"
 
-const Experience = () => {
+interface IReduxProps {
+  currentLanguage: string
+}
+
+const Experience: React.FC<IReduxProps> = ({ currentLanguage }) => {
   const viewport = useViewport()
+
+  let S = EN
+  if (currentLanguage === "EN") {
+    S = EN
+  } else if (currentLanguage === "KR") {
+    S = KR
+  }
   return (
     <ExperiencesContainer id="experience">
       <ExperiencesSectionTitle>{S.Experience.title}</ExperiencesSectionTitle>
@@ -72,4 +86,8 @@ const Experience = () => {
   )
 }
 
-export default Experience
+const mapStateToProps = (state: StoreState) => ({
+  currentLanguage: state.languageChangerReducer.currentLanguage,
+})
+
+export default reduxConnect(mapStateToProps)(Experience)

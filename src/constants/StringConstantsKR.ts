@@ -1,44 +1,44 @@
 export const Navigation = {
-  Home: "Home",
-  About: "About",
-  Projects: "Projects",
-  Skills: "Skills",
-  Experience: "Experience",
+  Home: "홈",
+  About: "소개",
+  Projects: "프로젝트",
+  Skills: "스킬",
+  Experience: "경력",
 }
 export const Home = {
-  title: "Soo Jong Roh",
-  bannerText: "SJ",
+  title: "노수종",
+  bannerText: "수종",
 }
 
 export const About = {
-  title: "A React.js Web Developer",
+  title: "리액트 개발자",
   Introduce:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id dignissim neque. Suspendisse eu nisl vehicula, pulvinar urna non, molestie turpis. Maecenas eleifend feugiat leo, quis rhoncus sapien congue nec. Suspendisse a urna at tortor gravida pellentesque. Vestibulum posuere massa semper, molestie est eu, tristique justo. Cras accumsan sapien malesuada, porta enim non, facilisis neque. Nunc at interdum dui. Ut sed varius nisi, ut viverra libero.",
+    "로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘 로렘",
 }
 
 export const Projects = {
-  title: "My Projects",
+  title: "프로젝트",
   projectTitle: "Chelsea Framing Products",
   projectDescription: About.Introduce,
 }
 
 export const Technologies = {
-  react: "React",
-  javascript: "JavaScript",
+  react: "리액트",
+  javascript: "자바스크립트",
   html: "HTML5",
   css: "CSS3",
-  python: "Python",
-  rubyonrails: "Ruby on Rails",
+  python: "파이썬",
+  rubyonrails: "루비 온 레일즈",
   postgresql: "PostgreSQL",
-  firebase: "Firebase",
-  java: "Java",
-  aws: "AWS",
-  git: "Git",
-  typescript: "TypeScript",
+  firebase: "파이어베이스",
+  java: "자바",
+  aws: "아마존 웹 서비스",
+  git: "깃",
+  typescript: "타입스크립트",
 }
 
 export const Skills = {
-  title: "Skills",
+  title: "스킬",
   skills: {
     react: Technologies.react,
     javascript: Technologies.javascript,
@@ -56,12 +56,12 @@ export const Skills = {
 }
 
 export const Experience = {
-  title: "Experience",
+  title: "경력",
   contents: [
     {
       Title: "PNS Management, Inc.",
       Date: "Sep 2019 - Sep 2020",
-      Location: "Bensenville, IL",
+      Location: "벤슨빌, 일리노이",
       JobTitle: "IT Specialist",
       Descriptions: [
         "Maintained the company website by implementing new UI components and modifying existing UI components using JavaScript, HTML, CSS, and PHP",
@@ -74,7 +74,7 @@ export const Experience = {
     {
       Title: "Chelsea Framing Products",
       Date: "Oct 2018 - Sep 2019",
-      Location: "Lake Zurich, IL",
+      Location: "레이크 주리치, 일리노이",
       JobTitle: "Fullstack Developer",
       Descriptions: [
         "Implemented and deployed the company website using JavaScript, Ruby on Rails, and PostgreSQL from requirements specification to deployment in two months as the sole developer",
@@ -86,7 +86,7 @@ export const Experience = {
     {
       Title: "Freelancer",
       Date: "",
-      Location: "Chicago, IL",
+      Location: "시카고, 일리노이",
       JobTitle: "Web Developer",
       Descriptions: [
         "Built and deployed a static client-side application of a local Japanese restaurant using ReactJS, TypeScript, Styled-Components, and Redux",

@@ -7,7 +7,6 @@ import {
   SkillsListContainer,
   SkillsText,
 } from "./Skills.style"
-import * as S from "../../constants/StringConstants"
 import {
   AWSIcon,
   CSSIcon,
@@ -24,10 +23,24 @@ import {
 } from "assets/Icons"
 import useViewport from "utilities/hooks/useViewport"
 import { DeviceNameEnum } from "style/media"
+import * as EN from "../../constants/StringConstants"
+import * as KR from "../../constants/StringConstantsKR"
+import { connect as reduxConnect } from "react-redux"
+import { StoreState } from "store"
 
-const Skills = () => {
+interface IReduxProps {
+  currentLanguage: string
+}
+
+const Skills: React.FC<IReduxProps> = ({ currentLanguage }) => {
   const viewport: DeviceNameEnum = useViewport()
 
+  let S = EN
+  if (currentLanguage === "EN") {
+    S = EN
+  } else if (currentLanguage === "KR") {
+    S = KR
+  }
   return (
     <SkillsContainer id="skills">
       <SkillsTitle>{S.Navigation.Skills}</SkillsTitle>
@@ -134,4 +147,8 @@ const Skills = () => {
   )
 }
 
-export default Skills
+const mapStateToProps = (state: StoreState) => ({
+  currentLanguage: state.languageChangerReducer.currentLanguage,
+})
+
+export default reduxConnect(mapStateToProps)(Skills)

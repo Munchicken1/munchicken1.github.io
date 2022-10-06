@@ -84,4 +84,8 @@ export const CountryIcon = styled.span`
 export const IconsContainer = styled.div`
   bottom: 25px;
   position: absolute;
+  display: flex;
+  flex-direction: row;
 `
+
+export const IconContainer = styled.div``

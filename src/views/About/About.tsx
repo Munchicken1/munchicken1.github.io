@@ -8,9 +8,22 @@ import {
   AboutTitle,
 } from "./About.style"
 import Selfie from "../../assets/SJ_selfie.jpg"
-import * as S from "constants/StringConstants"
+import * as EN from "../../constants/StringConstants"
+import * as KR from "../../constants/StringConstantsKR"
+import { connect as reduxConnect } from "react-redux"
+import { StoreState } from "store"
 
-const About = () => {
+interface IReduxProps {
+  currentLanguage: string
+}
+
+const About: React.FC<IReduxProps> = ({ currentLanguage }) => {
+  let S = EN
+  if (currentLanguage === "EN") {
+    S = EN
+  } else if (currentLanguage === "KR") {
+    S = KR
+  }
   return (
     <AboutContainer id="about">
       <AboutImageContainer>
@@ -24,4 +37,8 @@ const About = () => {
   )
 }
 
-export default About
+const mapStateToProps = (state: StoreState) => ({
+  currentLanguage: state.languageChangerReducer.currentLanguage,
+})
+
+export default reduxConnect(mapStateToProps)(About)

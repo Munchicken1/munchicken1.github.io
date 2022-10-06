@@ -9,10 +9,12 @@ import {
   ProjectsIcon,
   SkillsIcon,
 } from "./Navbar.style"
-import * as S from "constants/StringConstants"
-import useWindowSize from "utilities/hooks/useWindowSize"
-import { DeviceNameEnum, size } from "style/media"
+import * as EN from "constants/StringConstants"
+import * as KR from "constants/StringConstantsKR"
+import { DeviceNameEnum } from "style/media"
 import useViewport from "utilities/hooks/useViewport"
+import { connect as reduxConnect } from "react-redux"
+import { StoreState } from "store"
 
 enum NavigationItemEnum {
   Home,
@@ -22,7 +24,11 @@ enum NavigationItemEnum {
   Experience,
 }
 
-const Navbar = () => {
+interface IReduxProps {
+  currentLanguage: string
+}
+
+const Navbar: React.FC<IReduxProps> = ({ currentLanguage }) => {
   const [refHome, setRefHome] = React.useState<HTMLElement | null>(null)
   const [refAbout, setRefAbout] = React.useState<HTMLElement | null>(null)
   const [refProjects, setRefProjects] = React.useState<HTMLElement | null>(null)
@@ -30,6 +36,12 @@ const Navbar = () => {
   const [refExperience, setRefExperience] = React.useState<HTMLElement | null>(
     null
   )
+  let S = EN
+  if (currentLanguage === "EN") {
+    S = EN
+  } else if (currentLanguage === "KR") {
+    S = KR
+  }
 
   const [enumTouching, setEnumTouching] =
     React.useState<NavigationItemEnum | null>(null)
@@ -130,4 +142,8 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+const mapStateToProps = (state: StoreState) => ({
+  currentLanguage: state.languageChangerReducer.currentLanguage,
+})
+
+export default reduxConnect(mapStateToProps)(Navbar)

@@ -4,22 +4,28 @@ import {
   ProjectsTitle,
   ProjectsList,
 } from "./Projects.style"
-import * as S from "../../constants/StringConstants"
+import * as EN from "../../constants/StringConstants"
+import * as KR from "../../constants/StringConstantsKR"
 import { connect as reduxConnect } from "react-redux"
 import { bindActionCreators } from "redux"
+import { StoreState } from "store"
 import { openModalProject } from "store/modalProject/modalProject_actions"
+import { IOpenModalProjectPayload } from "store/modalProject/modalProject_types"
 import {
   IProject,
   projects as ProjectConstants,
 } from "constants/ProjectConstants"
 import ProjectBanner from "./ProjectBanner"
-import { IOpenModalProjectPayload } from "store/modalProject/modalProject_types"
 
 interface IReduxProps {
   openModalProject: (inputProject: IOpenModalProjectPayload) => void
+  currentLanguage: string
 }
 
-const Projects: React.FC<IReduxProps> = ({ openModalProject }) => {
+const Projects: React.FC<IReduxProps> = ({
+  currentLanguage,
+  openModalProject,
+}) => {
   useEffect(() => {
     window.addEventListener("popstate", handlePopState)
     return () => {
@@ -47,6 +53,14 @@ const Projects: React.FC<IReduxProps> = ({ openModalProject }) => {
     openModalProject(payload)
   }
 
+  let S = EN
+
+  if (currentLanguage === "EN") {
+    S = EN
+  } else if (currentLanguage === "KR") {
+    S = KR
+  }
+
   return (
     <ProjectsContainer id="projects">
       <ProjectsTitle>{S.Projects.title}</ProjectsTitle>
@@ -65,7 +79,11 @@ const Projects: React.FC<IReduxProps> = ({ openModalProject }) => {
   )
 }
 
+const mapStateToProps = (state: StoreState) => ({
+  currentLanguage: state.languageChangerReducer.currentLanguage,
+})
+
 const mapDispatchToProps = (dispatch: any) =>
   bindActionCreators({ openModalProject }, dispatch)
 
-export default reduxConnect(null, mapDispatchToProps)(Projects)
+export default reduxConnect(mapStateToProps, mapDispatchToProps)(Projects)

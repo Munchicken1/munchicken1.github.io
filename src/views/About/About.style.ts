@@ -1,9 +1,13 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { TitleText } from "../../style/TextStyle.style"
 import { Container } from "../../style/Container.style"
 import { device } from "style/media"
 
 const ColumnPadding = "20px"
+
+interface IProps {
+  currentLanguage: string
+}
 
 export const AboutContainer = styled(Container)`
   background-color: ${(props) => props.theme.colors.white};
@@ -48,17 +52,47 @@ export const AboutTextContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   height: 100%;
+  min-width: 45%;
 
   padding: ${ColumnPadding};
 `
 
-export const AboutTitle = styled(TitleText)``
+export const AboutTitle = styled(TitleText)<IProps>`
+  margin-bottom: 5px;
 
-export const AboutText = styled.p`
+  ${(props) => {
+    if (props.currentLanguage === "KR") {
+      return css`
+        font-family: "Gowun Dodum";
+      `
+    } else {
+      return css`
+        font-family: "Aboreto";
+      `
+    }
+  }}
+`
+
+export const AboutTitlesContainer = styled.div``
+
+export const AboutTextsContainer = styled.div`
+  margin-top: 20px;
+`
+export const AboutText = styled.p<IProps>`
   font-size: 18px;
   line-height: 200%;
   color: ${(props) => props.theme.colors.charcoal};
-  font-family: "Quicksand", sans-serif;
+  /* font-family: "Quicksand", sans-serif; */
 
-  margin-top: 20px;
+  ${(props) => {
+    if (props.currentLanguage === "KR") {
+      return css`
+        font-family: "Gowun Dodum";
+      `
+    } else {
+      return css`
+        font-family: "Quicksand", sans-serif;
+      `
+    }
+  }}
 `

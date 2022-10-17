@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { TitleText } from "../../style/TextStyle.style"
 import { Container } from "../../style/Container.style"
 import { device } from "style/media"
@@ -14,7 +14,11 @@ export const ExperiencesContainer = styled(Container)`
     padding: 40px;
   }
 `
-export const ExperiencesSectionTitle = styled(TitleText)`
+interface IProps {
+  currentLanguage: string
+}
+
+export const ExperiencesSectionTitle = styled(TitleText)<IProps>`
   position: relative;
   padding-bottom: 20px;
 
@@ -29,6 +33,18 @@ export const ExperiencesSectionTitle = styled(TitleText)`
     margin: 0 -24px;
     background: #aaa;
   }
+
+  ${(props) => {
+    if (props.currentLanguage === "KR") {
+      return css`
+        font-family: "Gugi", cursive;
+      `
+    } else {
+      return css`
+        font-family: "Aboreto";
+      `
+    }
+  }}
 `
 
 export const ExperiencesContentContainer = styled.div`

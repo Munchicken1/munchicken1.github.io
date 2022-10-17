@@ -111,6 +111,19 @@ const IconCSS = css`
     height: 32px;
     color: ${(props) => props.theme.colors.charcoal};
   }
+
+  ${(props) => {
+    if (props.theme.colors.currentTheme === "Dark") {
+      return css`
+        @media ${device.mobile} {
+          color: ${(props) => props.theme.colors.greyWater};
+        }
+        @media ${device.tablet} {
+          color: ${(props) => props.theme.colors.charcoal};
+        }
+      `
+    }
+  }}
 `
 
 export const HomeIcon = styled(MuiHomeIcon)`

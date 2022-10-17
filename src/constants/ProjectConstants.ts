@@ -1,3 +1,6 @@
+import SJCover from "assets/sj_cover_moon.png"
+import SJCoverLav from "assets/sj_cover_lav.png"
+import SJCoverChar from "assets/sj_cover_char.png"
 import ChelseaCover from "assets/chelsea_cover.jpeg"
 import APICover from "assets/api_cover.jpeg"
 import PNSCover from "assets/pns_cover.jpeg"
@@ -7,6 +10,7 @@ import {
   JavaScriptIcon,
   PSQLIcon,
   RailsIcon,
+  ReactIcon,
 } from "assets/Icons"
 import * as S from "constants/StringConstants"
 import chelsea1 from "assets/chelsea1.png"
@@ -31,19 +35,54 @@ export interface IProject {
   websiteUrl: string
   projectImages: string[]
   title: string
-  content: string
+  content: string[]
   techs: ITech[]
   themeColor: string
 }
 
 export const projects: IProject[] = [
   {
+    bannerImage: SJCover,
+    websiteUrl: "https://www.soojong.com",
+    projectImages: [SJCover, SJCoverLav, SJCoverChar],
+    title: "SooJong (SJ) Roh",
+    content: [
+      "A portfolio website developed by myself.",
+      "Tools used include React, TypeScript, JavaScript, CSS3, and HTML5",
+    ],
+    techs: [
+      {
+        logoFile: ReactIcon,
+        name: S.Technologies.react,
+        iconClassName: "devicon-react-plain",
+      },
+      {
+        logoFile: JavaScriptIcon,
+        name: S.Technologies.javascript,
+        iconClassName: "devicon-javascript-plain",
+      },
+      {
+        logoFile: HTMLIcon,
+        name: S.Technologies.html,
+        iconClassName: "devicon-html5-plain",
+      },
+      {
+        logoFile: CSSIcon,
+        name: S.Technologies.css,
+        iconClassName: "devicon-css3-plain",
+      },
+    ],
+    themeColor: theme.colors.moon,
+  },
+  {
     bannerImage: ChelseaCover,
     websiteUrl: "https://www.chelseaframingproducts.com",
     projectImages: [chelsea1, chelsea2, chelsea3],
     title: "Chelsea Framing Products",
-    content:
-      "Website developed for a picture frame/moulding company as a fullstack developer. Tools used include Ruby on Rails, JavaScript, CSS3, HTML5, and PostgreSQL.",
+    content: [
+      "Website developed for a picture frame/moulding company as a fullstack developer.",
+      "Tools used include Ruby on Rails, JavaScript, CSS3, HTML5, and PostgreSQL.",
+    ],
     techs: [
       {
         logoFile: JavaScriptIcon,
@@ -78,8 +117,10 @@ export const projects: IProject[] = [
     websiteUrl: "https://www.apinow.com",
     projectImages: [api1, api2, api3],
     title: "Advanced Plastics, Inc.",
-    content:
-      "Website developed for a plastic resin distribution company. Tools used include JavaScript, CSS3, and HTML5.",
+    content: [
+      "Website developed for a plastic resin distribution company.",
+      "Tools used include JavaScript, CSS3, and HTML5.",
+    ],
     techs: [
       {
         logoFile: JavaScriptIcon,
@@ -104,8 +145,10 @@ export const projects: IProject[] = [
     websiteUrl: "http://www.pnsmgn.com",
     projectImages: [pns1, pns2, pns3],
     title: "PNS Management, Inc.",
-    content:
-      "Website developed for a logistics company's finance branch. Tools used include JavaScript, CSS3, and HTML5.",
+    content: [
+      "Website developed for a logistics company's finance branch.",
+      "Tools used include JavaScript, CSS3, and HTML5.",
+    ],
     techs: [
       {
         logoFile: JavaScriptIcon,

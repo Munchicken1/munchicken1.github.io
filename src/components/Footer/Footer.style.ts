@@ -1,14 +1,28 @@
-import styled from "styled-components"
+import styled, { css, DefaultTheme } from "styled-components"
 import EmailIcon from "@mui/icons-material/Email"
 import { device } from "style/media"
 
-export const FooterContainer = styled.div`
+interface IProps {
+  selectedTheme: DefaultTheme
+}
+
+export const FooterContainer = styled.div<IProps>`
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: ${(props) => props.theme.colors.charcoal};
+  ${(props) => {
+    if (props.selectedTheme.colors.currentTheme === "Dark") {
+      return css`
+        background-color: #000000;
+      `
+    } else {
+      return css`
+        background-color: ${(props) => props.theme.colors.charcoal};
+      `
+    }
+  }};
 
   @media ${device.mobile} {
     padding: 20px 20px 90px 20px;
@@ -36,6 +50,6 @@ export const FooterCopyrightTextContainer = styled.div`
 `
 
 export const FooterCopyrightText = styled.p`
-  color: ${(props) => props.theme.colors.white};
+  color: #ffffff;
   font-family: "Arial", sans-serif;
 `

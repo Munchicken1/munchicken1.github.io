@@ -39,7 +39,7 @@ function App() {
         <Skills />
         <Projects />
         <Experience />
-        <Footer />
+        <Footer selectedTheme={selectedTheme} />
       </AppContainer>
     </Providers>
   )

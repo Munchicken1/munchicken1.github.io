@@ -1,15 +1,17 @@
 import styled, { css } from "styled-components"
 import { TitleText } from "../../style/TextStyle.style"
 import { Container } from "../../style/Container.style"
-import * as S from "../../constants/StringConstants"
-import { AnyARecord } from "dns"
 import { device } from "style/media"
 
 export const SkillsContainer = styled(Container)`
   padding: 40px;
 `
 
-export const SkillsTitle = styled(TitleText)`
+interface ISkillsTitleProps {
+  currentLanguage: string
+}
+
+export const SkillsTitle = styled(TitleText)<ISkillsTitleProps>`
   position: relative;
   padding-bottom: 20px;
 
@@ -24,6 +26,18 @@ export const SkillsTitle = styled(TitleText)`
     margin: 0 -24px;
     background: #aaa;
   }
+
+  ${(props) => {
+    if (props.currentLanguage === "KR") {
+      return css`
+        font-family: "Gugi", cursive;
+      `
+    } else {
+      return css`
+        font-family: "Aboreto";
+      `
+    }
+  }}
 `
 
 export const SkillsListContainer = styled.div`

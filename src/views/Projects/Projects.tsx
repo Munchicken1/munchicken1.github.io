@@ -63,7 +63,9 @@ const Projects: React.FC<IReduxProps> = ({
 
   return (
     <ProjectsContainer id="projects">
-      <ProjectsTitle>{S.Projects.title}</ProjectsTitle>
+      <ProjectsTitle currentLanguage={currentLanguage}>
+        {S.Projects.title}
+      </ProjectsTitle>
       <ProjectsList>
         {ProjectConstants.map((project: IProject, index: number) => (
           <ProjectBanner

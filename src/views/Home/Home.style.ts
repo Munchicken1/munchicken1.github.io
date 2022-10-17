@@ -1,5 +1,5 @@
 import { device } from "style/media"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { Container } from "../../style/Container.style"
 
 export const HomeContainer = styled(Container)`
@@ -20,7 +20,8 @@ export const HomeBannerContainer = styled.div`
 
 export const HomeBannerText = styled.p`
   width: 100%;
-  font-family: "Exo", sans-serif;
+  /* font-family: "Exo", sans-serif; */
+  font-family: "Gugi", cursive;
   font-weight: 600;
 
   background: linear-gradient(
@@ -61,11 +62,27 @@ export const HomeBannerText = styled.p`
   }
 `
 
-export const HomeText = styled.p`
+interface IProps {
+  currentLanguage: string
+}
+
+export const HomeText = styled.p<IProps>`
   color: ${(props) => props.theme.colors.charcoal};
   font-size: 42px;
-  font-family: "Aboreto";
+  /* font-family: "Aboreto"; */
   font-weight: 600;
+
+  ${(props) => {
+    if (props.currentLanguage === "KR") {
+      return css`
+        font-family: "Gugi", cursive;
+      `
+    } else {
+      return css`
+        font-family: "Aboreto";
+      `
+    }
+  }}
 `
 
 export const CountryIcon = styled.span`

@@ -46,6 +46,7 @@ export const ThemeIcon = styled.li<IThemeChangerProps>`
   padding: 20px;
   border-radius: 50%;
   background-color: ${(props) => props.themeColor};
+  border-color: ${(props) => props.theme.colors.greyWater};
   cursor: pointer;
 
   ${(props) => {
@@ -66,11 +67,11 @@ export const ThemeIcon = styled.li<IThemeChangerProps>`
         border: 2px solid ${(props) => props.theme.colors.charcoal};
       `
     } else if (
-      props.themeColor === "#dcedb3" &&
-      props.selectedTheme.colors.currentTheme === "GreenTea"
+      props.themeColor === "#353239" &&
+      props.selectedTheme.colors.currentTheme === "Dark"
     ) {
       return css`
-        background-color: #9aa67d;
+        background-color: #000000;
         border: 2px solid ${(props) => props.theme.colors.charcoal};
       `
     } else if (props.themeColor === "#edddb3") {
@@ -95,7 +96,7 @@ export const ThemeIcon = styled.li<IThemeChangerProps>`
           background-color: #8c7da6;
         }
       `
-    } else if (props.themeColor === "#dcedb3") {
+    } else if (props.themeColor === "#353239") {
       return css`
         border: 2px solid ${(props) => props.theme.colors.greyWater};
         :hover {
@@ -103,7 +104,7 @@ export const ThemeIcon = styled.li<IThemeChangerProps>`
         }
         :active {
           border: 2px solid ${(props) => props.theme.colors.charcoal};
-          background-color: #9aa67d;
+          background-color: #000000;
         }
       `
     }

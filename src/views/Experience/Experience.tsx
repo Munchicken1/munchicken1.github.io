@@ -38,7 +38,9 @@ const Experience: React.FC<IReduxProps> = ({ currentLanguage }) => {
   }
   return (
     <ExperiencesContainer id="experience">
-      <ExperiencesSectionTitle>{S.Experience.title}</ExperiencesSectionTitle>
+      <ExperiencesSectionTitle currentLanguage={currentLanguage}>
+        {S.Experience.title}
+      </ExperiencesSectionTitle>
 
       <ExperiencesContentContainer>
         {S.Experience.contents.map((content) => (

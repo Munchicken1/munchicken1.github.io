@@ -75,7 +75,6 @@ export const ModalProjectBodyContainer = styled.div<IModalProjectThemeColor>`
   align-items: center;
   overflow-y: auto;
   padding: 40px;
-
   @media ${device.mobile} {
     width: 100%;
 
@@ -129,17 +128,22 @@ export const ModalProjectTitleText = styled.p`
   @media ${device.mobile} {
     font-size: 40px;
   }
-  @media ${device.tablet} {
+  @media ${device.desktop} {
     font-size: 50px;
   }
+`
+
+export const ModalProjectContentTextContainer = styled.div`
+  margin: auto;
 `
 
 export const ModalProjectContentText = styled.p`
   margin-top: 35px;
   font-size: 20px;
   line-height: 25px;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
   font-family: "Quicksand", sans-serif;
+  color: #353239;
 `
 
 export const ModalProjectCloseButtonContainer = styled.div`

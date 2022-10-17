@@ -1,9 +1,6 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { TitleText } from "../../style/TextStyle.style"
 import { Container } from "../../style/Container.style"
-import Box from "@mui/material/Box"
-import ButtonBase from "@mui/material/ButtonBase"
-import Typography from "@mui/material/Typography"
 import { device } from "style/media"
 
 const images = [
@@ -26,7 +23,11 @@ export const ProjectsContainer = styled(Container)`
   padding: 20px;
 `
 
-export const ProjectsTitle = styled(TitleText)`
+interface IProps {
+  currentLanguage: string
+}
+
+export const ProjectsTitle = styled(TitleText)<IProps>`
   position: relative;
   padding: 20px;
   margin-bottom: 40px;
@@ -42,6 +43,18 @@ export const ProjectsTitle = styled(TitleText)`
     margin: 0 -24px;
     background: #aaa;
   }
+
+  ${(props) => {
+    if (props.currentLanguage === "KR") {
+      return css`
+        font-family: "Gugi", cursive;
+      `
+    } else {
+      return css`
+        font-family: "Aboreto";
+      `
+    }
+  }}
 `
 
 export const ProjectsList = styled.div`

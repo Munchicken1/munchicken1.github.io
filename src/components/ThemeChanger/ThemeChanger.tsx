@@ -30,7 +30,7 @@ const ThemeChanger: React.FC<IProps> = ({ changeTheme, selectedTheme }) => {
           selectedTheme={selectedTheme}
         />
         <ThemeIcon
-          themeColor="#dcedb3"
+          themeColor="#353239"
           onClick={() => {
             changeTheme(thirdTheme)
           }}

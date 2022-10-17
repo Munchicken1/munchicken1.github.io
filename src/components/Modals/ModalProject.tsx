@@ -15,6 +15,7 @@ import {
   ModalButton,
   ModalButtonSpan,
   ModalProjectButtonContainer,
+  ModalProjectContentTextContainer,
 } from "./ModalProject.style"
 import { connect as reduxConnect } from "react-redux"
 import { StoreState } from "store"
@@ -107,9 +108,13 @@ const ModalProject: React.FC<IProps> = ({
             <ModalCloseIcon />
           </ModalProjectCloseButtonContainer>
           <ModalProjectTitleText>{currentProject.title}</ModalProjectTitleText>
-          <ModalProjectContentText>
-            {currentProject.content}
-          </ModalProjectContentText>
+          <ModalProjectContentTextContainer>
+            {currentProject.content.map((text) => (
+              <ModalProjectContentText key={text}>
+                {text}
+              </ModalProjectContentText>
+            ))}
+          </ModalProjectContentTextContainer>
           <ModalProjectButtonContainer>
             <a href={currentProject.websiteUrl} target="_blank">
               <ModalButton>

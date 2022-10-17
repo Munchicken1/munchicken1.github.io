@@ -43,7 +43,9 @@ const Skills: React.FC<IReduxProps> = ({ currentLanguage }) => {
   }
   return (
     <SkillsContainer id="skills">
-      <SkillsTitle>{S.Navigation.Skills}</SkillsTitle>
+      <SkillsTitle currentLanguage={currentLanguage}>
+        {S.Navigation.Skills}
+      </SkillsTitle>
       <SkillsListContainer>
         {/* First Row */}
         <SkillsList>

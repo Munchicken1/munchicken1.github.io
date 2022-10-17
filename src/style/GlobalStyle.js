@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components"
+import "fonts/milyang/MYYeongnamnu.ttf"
 
 export const GlobalStyle = createGlobalStyle`
     * {
@@ -60,6 +61,5 @@ export const GlobalStyle = createGlobalStyle`
             height: 55px !important;
         }
     }
-    
 
 `

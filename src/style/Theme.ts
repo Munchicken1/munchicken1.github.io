@@ -68,11 +68,11 @@ export const secondTheme = {
 
 export const thirdTheme = {
   colors: {
-    currentTheme: "GreenTea",
-    black: "#000000",
-    white: "#FFFFFF",
-    moon: "#9aa67d",
-    charcoal: "#353239",
+    currentTheme: "Dark",
+    black: "#888",
+    white: "#000000",
+    moon: "#353239",
+    charcoal: "#FFFFFF",
     brown: "#54433a",
     hoverText: "#B2AB99",
     moonDark: "#E3CB8A",

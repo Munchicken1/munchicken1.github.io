@@ -6,6 +6,8 @@ import {
   AboutText,
   AboutImage,
   AboutTitle,
+  AboutTitlesContainer,
+  AboutTextsContainer,
 } from "./About.style"
 import Selfie from "../../assets/SJ_selfie.jpg"
 import * as EN from "../../constants/StringConstants"
@@ -30,8 +32,20 @@ const About: React.FC<IReduxProps> = ({ currentLanguage }) => {
         <AboutImage src={Selfie} alt="Selfie" />
       </AboutImageContainer>
       <AboutTextContainer>
-        <AboutTitle>{S.About.title}</AboutTitle>
-        <AboutText>{S.About.Introduce}</AboutText>
+        <AboutTitlesContainer>
+          {S.About.title.map((title) => (
+            <AboutTitle currentLanguage={currentLanguage} key={title}>
+              {title}
+            </AboutTitle>
+          ))}
+        </AboutTitlesContainer>
+        <AboutTextsContainer>
+          {S.About.Introduce.map((body) => (
+            <AboutText currentLanguage={currentLanguage} key={body}>
+              {body}
+            </AboutText>
+          ))}
+        </AboutTextsContainer>
       </AboutTextContainer>
     </AboutContainer>
   )

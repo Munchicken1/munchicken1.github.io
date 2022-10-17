@@ -7,10 +7,15 @@ import {
   FooterCopyrightTextContainer,
 } from "./Footer.style"
 import { SocialIcon } from "react-social-icons"
+import { DefaultTheme } from "styled-components"
 
-const Footer = () => {
+interface IProps {
+  selectedTheme: DefaultTheme
+}
+
+const Footer: React.FC<IProps> = ({ selectedTheme }) => {
   return (
-    <FooterContainer>
+    <FooterContainer selectedTheme={selectedTheme}>
       <FooterIconsContainer>
         <FooterIconContainer>
           <SocialIcon

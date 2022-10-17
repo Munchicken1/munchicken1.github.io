@@ -11,9 +11,12 @@ export const Home = {
 }
 
 export const About = {
-  title: "A React.js Web Developer",
-  Introduce:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id dignissim neque. Suspendisse eu nisl vehicula, pulvinar urna non, molestie turpis. Maecenas eleifend feugiat leo, quis rhoncus sapien congue nec. Suspendisse a urna at tortor gravida pellentesque. Vestibulum posuere massa semper, molestie est eu, tristique justo. Cras accumsan sapien malesuada, porta enim non, facilisis neque. Nunc at interdum dui. Ut sed varius nisi, ut viverra libero.",
+  title: ["Hi, I’m SooJong.", "I also go by SJ."],
+  Introduce: [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam faucibus, diam in hendrerit pharetra, ante leo tristique mi, tincidunt pellentesque ipsum ante id purus. Proin ornare volutpat interdum. Mauris leo mauris, faucibus quis lacus nec, pellentesque sollicitudin nibh. Integer varius molestie lectus, sed fringilla erat commodo eu. Nullam blandit ex at dapibus lobortis. Ut tincidunt risus a elit porta, nec rutrum justo sodales. Aenean molestie ex magna, vel eleifend turpis fermentum nec. Vestibulum rhoncus suscipit varius. Curabitur molestie, ligula vel placerat semper, metus ante volutpat odio, sit amet vehicula dui sem a est.",
+  ],
+  // "After graduating in 2018 from the University of Illinois (at Urbana-Champaign) with a Bachelor’s Degree in Statistics, I’ve been into multiple fields of interest like International Distribution, Logistics, Actuary, and more. During those times, I enjoyed web development as a hobby. Ever since I founded a web developing club at University, I was very passionate about creating websites for local needs, or just for fun!",
+  //   "When it comes to Web Development, I get tons of energy with self-inspiration. I am a fast learner, and I enjoy learning new concepts/tools. I love to challenge myself by trying to achieve a better and more efficient code base. My current toolbox includes: React, TypeScript, JavaScript, CSS3, HTML5, Ruby on Rails, Python, and more!"
 }
 
 export const Projects = {

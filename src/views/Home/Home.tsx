@@ -41,7 +41,7 @@ const Home: React.FC<IReduxProps> = ({
       <HomeBannerContainer>
         <HomeBannerText>{S.Home.bannerText}</HomeBannerText>
       </HomeBannerContainer>
-      <HomeText>{S.Home.title}</HomeText>
+      <HomeText currentLanguage={currentLanguage}>{S.Home.title}</HomeText>
       <IconsContainer>
         <IconContainer onClick={setLanguageEN}>
           <CountryIcon

@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components"
-import { TitleText } from "../../style/TextStyle.style"
 import { Container } from "../../style/Container.style"
 import { device } from "style/media"
 
@@ -118,6 +117,10 @@ export const AboutTitle = styled.li<IProps>`
       84% {
         transform: translate3d(0, -480%, 0);
       }
+      99%,
+      100% {
+        transform: translate3d(0, 0, 0);
+      }
     }
     @-webkit-keyframes change {
       0%,
@@ -140,6 +143,10 @@ export const AboutTitle = styled.li<IProps>`
       80%,
       84% {
         transform: translate3d(0, -480%, 0);
+      }
+      99%,
+      100% {
+        transform: translate3d(0, 0, 0);
       }
     }
   }
@@ -168,6 +175,10 @@ export const AboutTitle = styled.li<IProps>`
       84% {
         transform: translate3d(0, -452%, 0);
       }
+      99%,
+      100% {
+        transform: translate3d(0, 0, 0);
+      }
     }
     @-webkit-keyframes change {
       0%,
@@ -190,6 +201,10 @@ export const AboutTitle = styled.li<IProps>`
       80%,
       84% {
         transform: translate3d(0, -452%, 0);
+      }
+      99%,
+      100% {
+        transform: translate3d(0, 0, 0);
       }
     }
   }
@@ -219,6 +234,10 @@ export const AboutTitle = styled.li<IProps>`
       84% {
         transform: translate3d(0, -428%, 0);
       }
+      99%,
+      100% {
+        transform: translate3d(0, 0, 0);
+      }
     }
     @-webkit-keyframes change {
       0%,
@@ -241,6 +260,10 @@ export const AboutTitle = styled.li<IProps>`
       80%,
       84% {
         transform: translate3d(0, -428%, 0);
+      }
+      99%,
+      100% {
+        transform: translate3d(0, 0, 0);
       }
     }
   }

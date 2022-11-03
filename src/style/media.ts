@@ -3,6 +3,7 @@ export const size = {
   tablet: "768",
   laptop: "1080",
   desktop: "1440",
+  bigScreen: "2000",
 }
 
 export const device = {
@@ -10,6 +11,7 @@ export const device = {
   tablet: `(min-width: ${size.tablet}px)`,
   laptop: `(min-width: ${size.laptop}px)`,
   desktop: `(min-width: ${size.desktop}px)`,
+  bigScreen: `(min-width: ${size.bigScreen}px)`,
 }
 
 export enum DeviceNameEnum {
@@ -17,4 +19,5 @@ export enum DeviceNameEnum {
   tablet = "tablet",
   laptop = "laptop",
   desktop = "desktop",
+  bigScreen = "bigScreen",
 }

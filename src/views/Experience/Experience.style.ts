@@ -129,6 +129,7 @@ export const ExperiencesJobDescriptionsContainer = styled.ul`
   display: flex;
   flex-direction: column;
   list-style: disc;
+  color: ${(props) => props.theme.colors.black};
 
   margin-top: 5px;
 

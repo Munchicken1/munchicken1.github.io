@@ -11,7 +11,14 @@ export const Home = {
 }
 
 export const About = {
-  title: ["Hi, I’m SooJong.", "I also go by SJ."],
+  title: [
+    "Hi, I’m SooJong.",
+    "I also go by SJ.",
+    "I am a Web Developer.",
+    "I play tennis.",
+    "I love drinking coffee.",
+    "I like cat.",
+  ],
   Introduce: [
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam faucibus, diam in hendrerit pharetra, ante leo tristique mi, tincidunt pellentesque ipsum ante id purus. Proin ornare volutpat interdum. Mauris leo mauris, faucibus quis lacus nec, pellentesque sollicitudin nibh. Integer varius molestie lectus, sed fringilla erat commodo eu. Nullam blandit ex at dapibus lobortis. Ut tincidunt risus a elit porta, nec rutrum justo sodales. Aenean molestie ex magna, vel eleifend turpis fermentum nec. Vestibulum rhoncus suscipit varius. Curabitur molestie, ligula vel placerat semper, metus ante volutpat odio, sit amet vehicula dui sem a est.",
   ],

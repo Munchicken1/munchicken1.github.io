@@ -7,6 +7,8 @@ import {
   ProjectBannerIconsContainer,
   ProjectBannerIcon,
 } from "./Projects.style"
+import { device, DeviceNameEnum } from "style/media"
+import useViewport from "utilities/hooks/useViewport"
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: "relative",
@@ -83,6 +85,15 @@ const ProjectBanner: React.FC<IProps> = ({
   project,
   handleClickProjectBanner,
 }) => {
+  let bannerHeight = 300
+  const viewport: DeviceNameEnum = useViewport()
+  if (viewport === DeviceNameEnum.bigScreen) {
+    bannerHeight = 450
+  } else if (viewport === DeviceNameEnum.mobile) {
+    bannerHeight = 120
+  } else {
+    bannerHeight = 300
+  }
   return (
     <>
       <ImageButton
@@ -90,6 +101,7 @@ const ProjectBanner: React.FC<IProps> = ({
         key={project.title}
         style={{
           width: "100%",
+          height: bannerHeight,
         }}
         onClick={handleClickProjectBanner}
       >

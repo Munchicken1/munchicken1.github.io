@@ -70,7 +70,7 @@ export const thirdTheme = {
   colors: {
     currentTheme: "Dark",
     black: "#888",
-    white: "#000000",
+    white: "#1C1C1C",
     moon: "#353239",
     charcoal: "#FFFFFF",
     brown: "#54433a",

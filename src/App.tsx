@@ -34,7 +34,7 @@ function App() {
           selectedTheme={selectedTheme}
           changeTheme={handleThemeChanger}
         />
-        <Home />
+        <Home selectedTheme={selectedTheme} />
         <About />
         <Skills />
         <Projects />

@@ -1,6 +1,7 @@
 import SJCover from "assets/sj_cover_moon.png"
-import SJCoverLav from "assets/sj_cover_lav.png"
-import SJCoverChar from "assets/sj_cover_char.png"
+import sj1 from "assets/SJ1.png"
+import sj2 from "assets/SJ2.png"
+import sj3 from "assets/SJ3.png"
 import ChelseaCover from "assets/chelsea_cover.jpeg"
 import APICover from "assets/api_cover.jpeg"
 import PNSCover from "assets/pns_cover.jpeg"
@@ -44,7 +45,7 @@ export const projects: IProject[] = [
   {
     bannerImage: SJCover,
     websiteUrl: "https://www.soojong.com",
-    projectImages: [SJCover, SJCoverLav, SJCoverChar],
+    projectImages: [sj1, sj2, sj3],
     title: "SooJong (SJ) Roh",
     content: [
       "A portfolio website developed by myself.",

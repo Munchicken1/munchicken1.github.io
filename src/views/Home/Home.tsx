@@ -7,6 +7,7 @@ import {
   HomeBannerText,
   HomeBannerContainer,
   IconContainer,
+  Logo,
 } from "./Home.style"
 import * as EN from "../../constants/StringConstants"
 import * as KR from "../../constants/StringConstantsKR"
@@ -17,17 +18,27 @@ import {
   setLanguageEN,
   setLanguageKR,
 } from "store/languageChanger/languageChanger_actions"
+import { LogoChar } from "assets/SVG/LogoChar"
+import { LogoWhite } from "assets/SVG/LogoWhite"
+import { SmallLogo } from "assets/SVG/SmallLogo"
+import { theme } from "style/Theme"
+import { DefaultTheme } from "styled-components"
 
-interface IReduxProps {
+interface IReduxProps extends IProps {
   setLanguageEN: () => void
   setLanguageKR: () => void
   currentLanguage: string
+}
+
+interface IProps {
+  selectedTheme: DefaultTheme
 }
 
 const Home: React.FC<IReduxProps> = ({
   currentLanguage,
   setLanguageEN,
   setLanguageKR,
+  selectedTheme,
 }) => {
   let S = EN
   if (currentLanguage === "EN") {
@@ -36,12 +47,26 @@ const Home: React.FC<IReduxProps> = ({
     S = KR
   }
 
+  let colorFill = "Char"
+  if (selectedTheme.colors.currentTheme !== "Dark") {
+    colorFill = "Char"
+  } else if (selectedTheme.colors.currentTheme === "Dark") {
+    colorFill = "White"
+  }
+
   return (
     <HomeContainer id="home">
+      {/* <SmallLogo /> */}
       <HomeBannerContainer>
-        <HomeBannerText>{S.Home.bannerText}</HomeBannerText>
+        {currentLanguage === "EN" && colorFill === "Char" ? (
+          <LogoChar />
+        ) : currentLanguage === "EN" && colorFill === "White" ? (
+          <LogoWhite />
+        ) : (
+          <HomeBannerText>{S.Home.bannerText}</HomeBannerText>
+        )}
       </HomeBannerContainer>
-      <HomeText currentLanguage={currentLanguage}>{S.Home.title}</HomeText>
+      {/* <HomeText currentLanguage={currentLanguage}>{S.Home.title}</HomeText> */}
       <IconsContainer>
         <IconContainer onClick={setLanguageEN}>
           <CountryIcon

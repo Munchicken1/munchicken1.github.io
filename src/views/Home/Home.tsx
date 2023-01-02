@@ -8,6 +8,10 @@ import {
   HomeBannerContainer,
   IconContainer,
   Logo,
+  LogoDark,
+  LogoLight,
+  LogoDarkKor,
+  LogoLightKor,
 } from "./Home.style"
 import * as EN from "../../constants/StringConstants"
 import * as KR from "../../constants/StringConstantsKR"
@@ -18,8 +22,6 @@ import {
   setLanguageEN,
   setLanguageKR,
 } from "store/languageChanger/languageChanger_actions"
-import { LogoChar } from "assets/SVG/LogoChar"
-import { LogoWhite } from "assets/SVG/LogoWhite"
 import { SmallLogo } from "assets/SVG/SmallLogo"
 import { theme } from "style/Theme"
 import { DefaultTheme } from "styled-components"
@@ -59,11 +61,15 @@ const Home: React.FC<IReduxProps> = ({
       {/* <SmallLogo /> */}
       <HomeBannerContainer>
         {currentLanguage === "EN" && colorFill === "Char" ? (
-          <LogoChar />
+          <LogoDark />
         ) : currentLanguage === "EN" && colorFill === "White" ? (
-          <LogoWhite />
+          <LogoLight />
+        ) : currentLanguage === "KR" && colorFill === "Char" ? (
+          <LogoDarkKor />
+        ) : currentLanguage === "KR" && colorFill === "White" ? (
+          <LogoLightKor />
         ) : (
-          <HomeBannerText>{S.Home.bannerText}</HomeBannerText>
+          <HomeBannerText>수종</HomeBannerText>
         )}
       </HomeBannerContainer>
       {/* <HomeText currentLanguage={currentLanguage}>{S.Home.title}</HomeText> */}

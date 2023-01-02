@@ -2,6 +2,10 @@ import { device } from "style/media"
 import styled, { css } from "styled-components"
 import { Container } from "../../style/Container.style"
 import HomeLogo from "assets/SVG/Logo_Charcoal.svg"
+import { LogoChar } from "assets/SVG/LogoChar"
+import { LogoWhite } from "assets/SVG/LogoWhite"
+import { LogoCharKor } from "assets/SVG/LogoCharKor"
+import { LogoWhiteKor } from "assets/SVG/LogoWhiteKor"
 
 export const HomeContainer = styled(Container)`
   height: 100vh;
@@ -116,3 +120,11 @@ export const Logo = styled(HomeLogo)`
   left: 10;
   top: 10;
 `
+
+export const LogoDark = styled(LogoChar)``
+
+export const LogoLight = styled(LogoWhite)``
+
+export const LogoDarkKor = styled(LogoCharKor)``
+
+export const LogoLightKor = styled(LogoWhiteKor)``

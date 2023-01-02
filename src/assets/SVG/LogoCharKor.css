@@ -1,0 +1,28 @@
+#char-kor path:nth-child(1) {
+  stroke-dasharray: 857px;
+  stroke-dashoffset: 857px;
+  animation: line-anim 3s ease forwards;
+}
+#char-kor path:nth-child(2) {
+  stroke-dasharray: 1171px;
+  stroke-dashoffset: 1171px;
+  animation: line-anim 3s ease forwards;
+}
+
+#logo-char-kor {
+  animation: fill-anim 0.5s ease forwards 3s;
+}
+
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fill-anim {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #353239;
+  }
+}

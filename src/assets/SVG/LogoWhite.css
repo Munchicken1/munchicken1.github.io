@@ -1,0 +1,92 @@
+/* Soo */
+#first-white path:nth-child(1) {
+  stroke-dasharray: 758px;
+  stroke-dashoffset: 758px;
+  animation: line-anim 2s ease forwards;
+}
+#first-white path:nth-child(2) {
+  stroke-dasharray: 343px;
+  stroke-dashoffset: 343px;
+  animation: line-anim 2s ease forwards 0.3s;
+}
+#first-white path:nth-child(3) {
+  stroke-dasharray: 343px;
+  stroke-dashoffset: 343px;
+  animation: line-anim 2s ease forwards 0.6s;
+}
+
+/* Jong */
+#second-white path:nth-child(1) {
+  stroke-dasharray: 487px;
+  stroke-dashoffset: 487px;
+  animation: line-anim 2s ease forwards 0.9s;
+}
+#second-white path:nth-child(2) {
+  stroke-dasharray: 343px;
+  stroke-dashoffset: 343px;
+  animation: line-anim 2s ease forwards 1.2s;
+}
+#second-white path:nth-child(3) {
+  stroke-dasharray: 658px;
+  stroke-dashoffset: 658px;
+  animation: line-anim 2s ease forwards 1.5s;
+}
+#second-white path:nth-child(4) {
+  stroke-dasharray: 730px;
+  stroke-dashoffset: 730px;
+  animation: line-anim 2s ease forwards 1.8s;
+}
+
+/* Roh */
+#third-white path:nth-child(1) {
+  stroke-dasharray: 597px;
+  stroke-dashoffset: 597px;
+  animation: line-anim 2s ease forwards 2.1s;
+}
+#third-white path:nth-child(2) {
+  stroke-dasharray: 759px;
+  stroke-dashoffset: 759px;
+  animation: line-anim 2s ease forwards 2.4s;
+}
+#third-white path:nth-child(3) {
+  stroke-dasharray: 343px;
+  stroke-dashoffset: 343px;
+  animation: line-anim 2s ease forwards 2.7s;
+}
+
+/* dot */
+#fourth-white path:nth-child(1) {
+  stroke-dasharray: 82px;
+  stroke-dashoffset: 82px;
+  animation: line-anim 2s ease forwards 3s;
+}
+
+#first-white {
+  animation: fill-anim-white 0.5s ease forwards 2.5s;
+}
+
+#second-white {
+  animation: fill-anim-white 0.5s ease forwards 3.5s;
+}
+
+#third-white {
+  animation: fill-anim-white 0.5s ease forwards 4s;
+}
+
+#fourth-white {
+  animation: fill-anim-white 0.5s ease forwards 4.5s;
+}
+
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fill-anim-white {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #ffffff;
+  }
+}

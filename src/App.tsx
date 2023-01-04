@@ -11,6 +11,7 @@ import Providers from "./utilities/providers/Providers"
 import ThemeChanger from "components/ThemeChanger/ThemeChanger"
 import NavbarMobile from "components/Navbar/NavbarMobile"
 import { theme } from "style/Theme"
+import { size } from "style/media"
 
 function App() {
   const [viewport, setViewport] = useState(
@@ -29,7 +30,7 @@ function App() {
   return (
     <Providers selectedTheme={selectedTheme}>
       <AppContainer>
-        <Navbar />
+        {viewport > 450 ? <Navbar /> : <NavbarMobile />}
         <ThemeChanger
           selectedTheme={selectedTheme}
           changeTheme={handleThemeChanger}

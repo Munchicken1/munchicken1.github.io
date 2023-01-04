@@ -8,6 +8,16 @@ import {
   ExperienceIcon,
   ProjectsIcon,
   SkillsIcon,
+  NavbarMobileMain,
+  NavbarMobileMenu,
+  NavbarMobileMenuItem,
+  NabarMobileMenuItemButton,
+  NavbarMobileMenuInput,
+  NavbarMobileSpan,
+  NavbarMobileContainer,
+  NavbarMobileMenuSpan,
+  CloseIcon,
+  OpenIcon,
 } from "./NavbarMobile.style"
 import * as S from "constants/StringConstants"
 
@@ -19,6 +29,8 @@ const NavbarMobile = () => {
   const [refExperience, setRefExperience] = React.useState<HTMLElement | null>(
     null
   )
+
+  const [isOpen, setIsOpen] = React.useState(false)
 
   React.useEffect(() => {
     setRefHome(document.getElementById("home"))
@@ -54,26 +66,55 @@ const NavbarMobile = () => {
     }
   }
 
+  const handleClickToggleMobileNavbar = () => {
+    setIsOpen(!isOpen)
+  }
+
   return (
-    <NavbarContainer>
-      <NavbarList>
-        <NavbarListItem onClick={handleClickHome}>
-          <HomeIcon />
-        </NavbarListItem>
-        <NavbarListItem onClick={handleClickAbout}>
-          <AboutIcon />
-        </NavbarListItem>
-        <NavbarListItem onClick={handleClickSkills}>
-          <SkillsIcon />
-        </NavbarListItem>
-        <NavbarListItem onClick={handleClickProjects}>
-          <ProjectsIcon />
-        </NavbarListItem>
-        <NavbarListItem onClick={handleClickExperience}>
-          <ExperienceIcon />
-        </NavbarListItem>
-      </NavbarList>
-    </NavbarContainer>
+    // <NavbarContainer>
+    //   <NavbarList>
+    //     <NavbarListItem onClick={handleClickHome}>
+    //       <HomeIcon />
+    //     </NavbarListItem>
+    //     <NavbarListItem onClick={handleClickAbout}>
+    //       <AboutIcon />
+    //     </NavbarListItem>
+    //     <NavbarListItem onClick={handleClickSkills}>
+    //       <SkillsIcon />
+    //     </NavbarListItem>
+    //     <NavbarListItem onClick={handleClickProjects}>
+    //       <ProjectsIcon />
+    //     </NavbarListItem>
+    //     <NavbarListItem onClick={handleClickExperience}>
+    //       <ExperienceIcon />
+    //     </NavbarListItem>
+    //   </NavbarList>
+    // </NavbarContainer>
+    <NavbarMobileContainer>
+      <NavbarMobileMain isOpen={isOpen} onClick={handleClickToggleMobileNavbar}>
+        {/* <NavbarMobileSpan isOpen={isOpen}></NavbarMobileSpan>
+        <NavbarMobileSpan isOpen={isOpen}></NavbarMobileSpan>
+        <NavbarMobileSpan isOpen={isOpen}></NavbarMobileSpan> */}
+        <OpenIcon isOpen={isOpen} />
+        <NavbarMobileMenu isOpen={isOpen}>
+          <NavbarMobileMenuItem onClick={handleClickAbout}>
+            <AboutIcon />
+          </NavbarMobileMenuItem>
+          <NavbarMobileMenuItem onClick={handleClickSkills}>
+            <SkillsIcon />
+          </NavbarMobileMenuItem>
+          <NavbarMobileMenuItem onClick={handleClickToggleMobileNavbar}>
+            <CloseIcon isOpen={isOpen} />
+          </NavbarMobileMenuItem>
+          <NavbarMobileMenuItem onClick={handleClickProjects}>
+            <ProjectsIcon />
+          </NavbarMobileMenuItem>
+          <NavbarMobileMenuItem onClick={handleClickExperience}>
+            <ExperienceIcon />
+          </NavbarMobileMenuItem>
+        </NavbarMobileMenu>
+      </NavbarMobileMain>
+    </NavbarMobileContainer>
   )
 }
 

@@ -160,7 +160,7 @@ export const ModalCloseIcon = styled(CloseIcon)`
     width: 100%;
     height: 100%;
     cursor: pointer;
-    color: ${(props) => props.theme.colors.white};
+    color: white;
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 50%;
 

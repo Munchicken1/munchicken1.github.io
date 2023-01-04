@@ -75,7 +75,7 @@ export const thirdTheme = {
     charcoal: "#FFFFFF",
     brown: "#54433a",
     hoverText: "#B2AB99",
-    moonDark: "#E3CB8A",
+    moonDark: "#161c20",
     moonComplementary: "#B3C3ED",
     html: "#E44D26",
     css: "#1572B6",

@@ -1,16 +1,32 @@
 #char-kor path:nth-child(1) {
-  stroke-dasharray: 857px;
-  stroke-dashoffset: 857px;
+  stroke-dasharray: 423px;
+  stroke-dashoffset: 423px;
   animation: line-anim 3s ease forwards;
 }
+@media (min-width: 768px) {
+  #char-kor path:nth-child(1) {
+    stroke-dasharray: 857px;
+    stroke-dashoffset: 857px;
+    animation: line-anim 3s ease forwards;
+  }
+}
+
 #char-kor path:nth-child(2) {
-  stroke-dasharray: 1171px;
-  stroke-dashoffset: 1171px;
+  stroke-dasharray: 577px;
+  stroke-dashoffset: 577px;
   animation: line-anim 3s ease forwards;
 }
 
+@media (min-width: 768px) {
+  #char-kor path:nth-child(2) {
+    stroke-dasharray: 1171px;
+    stroke-dashoffset: 1171px;
+    animation: line-anim 3s ease forwards;
+  }
+}
+
 #logo-char-kor {
-  animation: fill-anim 0.5s ease forwards 3s;
+  animation: fill-anim 0.5s ease forwards 2.7s;
 }
 
 @keyframes line-anim {
